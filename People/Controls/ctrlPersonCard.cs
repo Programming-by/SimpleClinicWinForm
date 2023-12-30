@@ -43,5 +43,27 @@ namespace SimpleClinicWinForm.People.Controls
 
         }
 
+        public void LoadPersonInfo(string Name)
+        {
+            _Person = clsPersons.Find(Name);
+            if (_Person == null)
+            {
+                MessageBox.Show("Person doesn't exist", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            _PersonID = _Person.PersonID;
+
+            lblPersonID.Text = _PersonID.ToString();
+            lblName.Text = _Person.Name;
+            lblDateOfBirth.Text = _Person.DateOfBirth.ToString();
+            lblGendor.Text = _Person.Gender.ToLower() == "m" ? "Male" : "Female";
+            lblPhoneNumber.Text = _Person.PhoneNumber;
+            lblEmail.Text = _Person.Email;
+            lblAddress.Text = _Person.Address;
+
+
+        }
+
     }
 }

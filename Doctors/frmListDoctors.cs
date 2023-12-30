@@ -108,5 +108,24 @@ namespace SimpleClinicWinForm.Doctors
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
 
         }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you want to delete this doctor?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                return;
+
+            if (clsDoctors.DeleteDoctors((int)dgvDoctors.CurrentRow.Cells[0].Value))
+            {
+                MessageBox.Show("Doctor Deleted Successfully", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmListDoctors_Load(null, null);
+            }
+            else
+                MessageBox.Show("Failed to Delete this Doctor", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }
