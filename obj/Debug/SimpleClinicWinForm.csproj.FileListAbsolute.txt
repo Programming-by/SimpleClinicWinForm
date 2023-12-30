@@ -1,0 +1,17 @@
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.csproj.AssemblyReference.cache
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.People.frmListPeople.resources
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Properties.Resources.resources
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\SimpleClinicWinForm\bin\Debug\SimpleClinicWinForm.exe.config
+C:\Users\User\Source\Repos\SimpleClinicWinForm\bin\Debug\SimpleClinicWinForm.exe
+C:\Users\User\Source\Repos\SimpleClinicWinForm\bin\Debug\SimpleClinicWinForm.pdb
+C:\Users\User\Source\Repos\SimpleClinicWinForm\bin\Debug\SimpleClinicBusinessLayer.dll
+C:\Users\User\Source\Repos\SimpleClinicWinForm\bin\Debug\SimpleClinicDataAccessLayer.dll
+C:\Users\User\Source\Repos\SimpleClinicWinForm\bin\Debug\SimpleClinicBusinessLayer.pdb
+C:\Users\User\Source\Repos\SimpleClinicWinForm\bin\Debug\SimpleClinicDataAccessLayer.pdb
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.csproj.CopyComplete
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.exe
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.pdb
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.frmMainMenue.resources

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimpleClinicWinForm.People;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,18 @@ using System.Windows.Forms;
 
 namespace SimpleClinicWinForm
 {
-    public partial class Form1 : Form
+    public partial class frmMainMenue : Form
     {
-        public Form1()
+        public frmMainMenue()
         {
             InitializeComponent();
+        }
+
+        private void peopleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListPeople frm = new frmListPeople();
+
+            frm.ShowDialog();
         }
     }
 }
