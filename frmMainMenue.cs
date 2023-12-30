@@ -1,4 +1,5 @@
-﻿using SimpleClinicWinForm.People;
+﻿using SimpleClinicWinForm.Doctors;
+using SimpleClinicWinForm.People;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,13 @@ namespace SimpleClinicWinForm
         private void peopleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListPeople frm = new frmListPeople();
+
+            frm.ShowDialog();
+        }
+
+        private void doctorsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListDoctors frm = new frmListDoctors();
 
             frm.ShowDialog();
         }

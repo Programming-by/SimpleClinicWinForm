@@ -162,5 +162,12 @@ namespace SimpleClinicWinForm.People
 
             frm.ShowDialog();
         }
+
+        private void txtFilter1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (cbFilters.Text == "PersonID")
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+        }
     }
 }

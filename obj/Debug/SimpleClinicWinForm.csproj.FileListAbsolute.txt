@@ -18,3 +18,4 @@ C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.frm
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.People.frmAddNewPerson.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.People.Controls.ctrlPersonCard.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.People.Controls.frmShowPersonDetails.resources
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Doctors.frmListDoctors.resources
