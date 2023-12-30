@@ -18,11 +18,12 @@ namespace SimpleClinicWinForm.People
             InitializeComponent();
         }
 
-        private DataTable _dtPeople = clsPersons.GetAllPersons();
+        private DataTable _dtPeople;
 
         private void frmListPeople_Load(object sender, EventArgs e)
         {
             cbFilters.SelectedIndex = 0;
+            _dtPeople = clsPersons.GetAllPersons();
             dgvPeople.DataSource = _dtPeople;
             lblPeopleCount.Text = dgvPeople.Rows.Count.ToString();
 
@@ -103,6 +104,48 @@ namespace SimpleClinicWinForm.People
 
             lblPeopleCount.Text = dgvPeople.Rows.Count.ToString();
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void btnAddNewPerson_Click(object sender, EventArgs e)
+        {
+            frmAddNewPerson frm = new frmAddNewPerson();
+
+            frm.ShowDialog();
+
+            frmListPeople_Load(null, null);
+
+        }
+        private void addNewPersonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddNewPerson frm = new frmAddNewPerson();
+
+            frm.ShowDialog();
+
+            frmListPeople_Load(null, null);
+        }
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddNewPerson frm = new frmAddNewPerson((int)dgvPeople.CurrentRow.Cells[0].Value);
+
+            frm.ShowDialog();
+
+            frmListPeople_Load(null, null);
+        }
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you want to delete this person", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                return;
+
+            if (clsPersons.DeletePersons((int)dgvPeople.CurrentRow.Cells[0].Value))
+            {
+                MessageBox.Show("Person Deleted Successfully", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmListPeople_Load(null, null); 
+            } else
+                MessageBox.Show("Failed to Delete this Person", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

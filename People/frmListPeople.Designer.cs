@@ -35,13 +35,11 @@
             this.lblPeopleCount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAddNewPerson = new System.Windows.Forms.Button();
-            this.sendPhoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewPersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.sendEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvPeople = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFilter1 = new System.Windows.Forms.TextBox();
@@ -83,6 +81,7 @@
             this.btnClose.TabIndex = 33;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lblPeopleCount
             // 
@@ -111,30 +110,28 @@
             this.btnAddNewPerson.Size = new System.Drawing.Size(111, 73);
             this.btnAddNewPerson.TabIndex = 30;
             this.btnAddNewPerson.UseVisualStyleBackColor = true;
-            // 
-            // sendPhoneToolStripMenuItem
-            // 
-            this.sendPhoneToolStripMenuItem.Name = "sendPhoneToolStripMenuItem";
-            this.sendPhoneToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
-            this.sendPhoneToolStripMenuItem.Text = "Phone Call";
+            this.btnAddNewPerson.Click += new System.EventHandler(this.btnAddNewPerson_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // addNewPersonToolStripMenuItem
             // 
             this.addNewPersonToolStripMenuItem.Name = "addNewPersonToolStripMenuItem";
-            this.addNewPersonToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
+            this.addNewPersonToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.addNewPersonToolStripMenuItem.Text = "Add New Person";
+            this.addNewPersonToolStripMenuItem.Click += new System.EventHandler(this.addNewPersonToolStripMenuItem_Click);
             // 
             // showDetailsToolStripMenuItem
             // 
@@ -149,17 +146,9 @@
             this.showDetailsToolStripMenuItem,
             this.addNewPersonToolStripMenuItem,
             this.editToolStripMenuItem,
-            this.deleteToolStripMenuItem,
-            this.sendEmailToolStripMenuItem,
-            this.sendPhoneToolStripMenuItem});
+            this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(188, 148);
-            // 
-            // sendEmailToolStripMenuItem
-            // 
-            this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
-            this.sendEmailToolStripMenuItem.Text = "Send Email";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 128);
             // 
             // dgvPeople
             // 
@@ -226,13 +215,11 @@
         private System.Windows.Forms.Label lblPeopleCount;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAddNewPerson;
-        private System.Windows.Forms.ToolStripMenuItem sendPhoneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewPersonToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showDetailsToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem sendEmailToolStripMenuItem;
         private System.Windows.Forms.DataGridView dgvPeople;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtFilter1;
