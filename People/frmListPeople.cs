@@ -1,4 +1,5 @@
 ﻿using SimpleClinicBusinessLayer;
+using SimpleClinicWinForm.People.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -146,6 +147,20 @@ namespace SimpleClinicWinForm.People
                 frmListPeople_Load(null, null); 
             } else
                 MessageBox.Show("Failed to Delete this Person", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void showPersonDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShowPersonDetails frm = new frmShowPersonDetails((int)dgvPeople.CurrentRow.Cells[0].Value);
+
+            frm.ShowDialog();
+        }
+
+        private void dgvPeople_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmShowPersonDetails frm = new frmShowPersonDetails((int)dgvPeople.CurrentRow.Cells[0].Value);
+
+            frm.ShowDialog();
         }
     }
 }
