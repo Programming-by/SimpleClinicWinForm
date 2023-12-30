@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.txtFilter1 = new System.Windows.Forms.MaskedTextBox();
             this.cbFilters = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
@@ -45,17 +44,10 @@
             this.sendEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvPeople = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtFilter1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeople)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtFilter1
-            // 
-            this.txtFilter1.Location = new System.Drawing.Point(338, 156);
-            this.txtFilter1.Name = "txtFilter1";
-            this.txtFilter1.Size = new System.Drawing.Size(149, 22);
-            this.txtFilter1.TabIndex = 36;
-            this.txtFilter1.Visible = false;
             // 
             // cbFilters
             // 
@@ -67,16 +59,17 @@
             "Gender",
             "PhoneNumber",
             "Email"});
-            this.cbFilters.Location = new System.Drawing.Point(151, 154);
+            this.cbFilters.Location = new System.Drawing.Point(151, 147);
             this.cbFilters.Name = "cbFilters";
             this.cbFilters.Size = new System.Drawing.Size(168, 24);
             this.cbFilters.TabIndex = 35;
+            this.cbFilters.SelectedIndexChanged += new System.EventHandler(this.cbFilters_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 147);
+            this.label3.Location = new System.Drawing.Point(28, 140);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 29);
             this.label3.TabIndex = 34;
@@ -193,6 +186,15 @@
             this.label1.TabIndex = 28;
             this.label1.Text = "Manage People";
             // 
+            // txtFilter1
+            // 
+            this.txtFilter1.Location = new System.Drawing.Point(346, 147);
+            this.txtFilter1.Multiline = true;
+            this.txtFilter1.Name = "txtFilter1";
+            this.txtFilter1.Size = new System.Drawing.Size(161, 31);
+            this.txtFilter1.TabIndex = 36;
+            this.txtFilter1.TextChanged += new System.EventHandler(this.txtFilter1_TextChanged);
+            // 
             // frmListPeople
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -218,8 +220,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MaskedTextBox txtFilter1;
         private System.Windows.Forms.ComboBox cbFilters;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnClose;
@@ -235,5 +235,6 @@
         private System.Windows.Forms.ToolStripMenuItem sendEmailToolStripMenuItem;
         private System.Windows.Forms.DataGridView dgvPeople;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtFilter1;
     }
 }

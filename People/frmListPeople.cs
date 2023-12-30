@@ -54,5 +54,55 @@ namespace SimpleClinicWinForm.People
             }
 
         }
+
+        private void cbFilters_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtFilter1.Visible = (cbFilters.Text != "None");
+
+            txtFilter1.Text = "";
+            txtFilter1.Focus();
+
+        }
+
+        private void txtFilter1_TextChanged(object sender, EventArgs e)
+        {
+            string FilterColumn = "";
+            switch(cbFilters.Text)
+            {
+                case "PersonID":
+                    FilterColumn = "PersonID";
+                    break;
+                case "Name":
+                    FilterColumn = "Name";
+                    break;
+                case "Gender":
+                    FilterColumn = "Gender";
+                    break;
+                case "PhoneNumber":
+                    FilterColumn = "PhoneNumber";
+                    break;
+                case "Email":
+                    FilterColumn = "Email";
+                    break;
+                default:
+                case "None":
+                    break;
+            }
+
+            if (txtFilter1.Text.Trim() == "" || cbFilters.Text.Trim() == "None")
+            {
+                _dtPeople.DefaultView.RowFilter = "";
+                lblPeopleCount.Text = dgvPeople.Rows.Count.ToString();
+                return;
+            }
+
+            if (cbFilters.Text == "PersonID")
+                _dtPeople.DefaultView.RowFilter = string.Format("[{0}] = {1}",FilterColumn, txtFilter1.Text) ;
+            else
+                _dtPeople.DefaultView.RowFilter = string.Format("{0} Like '{1}%'", FilterColumn, txtFilter1.Text);
+
+            lblPeopleCount.Text = dgvPeople.Rows.Count.ToString();
+
+        }
     }
 }
