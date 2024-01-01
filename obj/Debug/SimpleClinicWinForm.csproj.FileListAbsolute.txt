@@ -7,8 +7,10 @@ C:\Users\User\Source\Repos\SimpleClinicWinForm\bin\Debug\SimpleClinicBusinessLay
 C:\Users\User\Source\Repos\SimpleClinicWinForm\bin\Debug\SimpleClinicDataAccessLayer.pdb
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.csproj.AssemblyReference.cache
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Doctors.Controls.ctrlDoctorCard.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Doctors.frmAddNewDoctor.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Doctors.frmListDoctors.resources
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Doctors.frmShowDoctorDetails.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.frmMainMenue.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.People.Controls.ctrlPersonCard.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.People.Controls.ctrlPersonCardWithFilter.resources

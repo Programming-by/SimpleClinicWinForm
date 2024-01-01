@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Doctors\Controls\ctrlDoctorCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Doctors\Controls\ctrlDoctorCard.Designer.cs">
+      <DependentUpon>ctrlDoctorCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doctors\frmAddNewDoctor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,12 @@
     </Compile>
     <Compile Include="Doctors\frmListDoctors.Designer.cs">
       <DependentUpon>frmListDoctors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctors\frmShowDoctorDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctors\frmShowDoctorDetails.Designer.cs">
+      <DependentUpon>frmShowDoctorDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMainMenue.cs">
       <SubType>Form</SubType>
@@ -97,11 +109,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Doctors\Controls\ctrlDoctorCard.resx">
+      <DependentUpon>ctrlDoctorCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Doctors\frmAddNewDoctor.resx">
       <DependentUpon>frmAddNewDoctor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doctors\frmListDoctors.resx">
       <DependentUpon>frmListDoctors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctors\frmShowDoctorDetails.resx">
+      <DependentUpon>frmShowDoctorDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainMenue.resx">
       <DependentUpon>frmMainMenue.cs</DependentUpon>

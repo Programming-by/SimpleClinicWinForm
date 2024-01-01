@@ -160,5 +160,19 @@ namespace SimpleClinicWinForm.Doctors
             frm.ShowDialog();
             frmListDoctors_Load(null, null);
         }
+
+        private void showDoctorDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShowDoctorDetails frm = new frmShowDoctorDetails((int)dgvDoctors.CurrentRow.Cells[0].Value);
+
+            frm.ShowDialog();
+        }
+
+        private void dgvDoctors_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmShowDoctorDetails frm = new frmShowDoctorDetails((int)dgvDoctors.CurrentRow.Cells[0].Value);
+
+            frm.ShowDialog();
+        }
     }
 }

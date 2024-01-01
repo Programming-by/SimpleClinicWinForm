@@ -138,6 +138,7 @@
             this.showDoctorDetailsToolStripMenuItem.Name = "showDoctorDetailsToolStripMenuItem";
             this.showDoctorDetailsToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
             this.showDoctorDetailsToolStripMenuItem.Text = "Show Doctor Details";
+            this.showDoctorDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDoctorDetailsToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 
@@ -148,7 +149,7 @@
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(215, 128);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(215, 100);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // txtFilter1
@@ -174,6 +175,7 @@
             this.dgvDoctors.RowTemplate.Height = 24;
             this.dgvDoctors.Size = new System.Drawing.Size(1146, 295);
             this.dgvDoctors.TabIndex = 38;
+            this.dgvDoctors.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDoctors_CellDoubleClick);
             // 
             // label1
             // 
