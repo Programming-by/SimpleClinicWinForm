@@ -21,6 +21,10 @@ namespace SimpleClinicWinForm.People
         int _PersonID = -1;
 
         private clsPersons _Person;
+
+        public delegate void DataBackHandler(object sender, int PersonID);
+
+        public event DataBackHandler DataBack;
         public frmAddNewPerson()
         {
             InitializeComponent();
@@ -100,6 +104,10 @@ namespace SimpleClinicWinForm.People
             if (_Person.Save())
             {
                 MessageBox.Show("Data Saved Successfully","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                Mode = enMode.Update;
+                lblTitle.Text = "Update Person";
+                _PersonID = _Person.PersonID;
+                DataBack?.Invoke(this, _PersonID);
             } else
                 MessageBox.Show("Failed to save this person","Error" ,MessageBoxButtons.OK,MessageBoxIcon.Error);
         }

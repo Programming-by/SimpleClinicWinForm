@@ -15,7 +15,11 @@ namespace SimpleClinicWinForm.People.Controls
     {
         private clsPersons _Person;
 
-        int _PersonID = -1;
+        public clsPersons SelectedPersonInfo { get { return _Person; } }
+
+        private int _PersonID = -1;
+
+        public int PersonID { get { return _PersonID; } }
         public ctrlPersonCard()
         {
             InitializeComponent();

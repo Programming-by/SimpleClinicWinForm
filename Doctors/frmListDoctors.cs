@@ -127,5 +127,38 @@ namespace SimpleClinicWinForm.Doctors
             else
                 MessageBox.Show("Failed to Delete this Doctor", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void btnAddNewPerson_Click(object sender, EventArgs e)
+        {
+            frmAddNewDoctor frm = new frmAddNewDoctor();
+
+            frm.ShowDialog();
+        }
+
+        private void btnAddNewDoctor_Click(object sender, EventArgs e)
+        {
+            frmAddNewDoctor frm = new frmAddNewDoctor();
+
+            frm.ShowDialog();
+            frmListDoctors_Load(null, null);
+
+        }
+
+        private void addNewDoctorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddNewDoctor frm = new frmAddNewDoctor();
+
+            frm.ShowDialog();
+            frmListDoctors_Load(null, null);
+
+
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddNewDoctor frm = new frmAddNewDoctor((int)dgvDoctors.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            frmListDoctors_Load(null, null);
+        }
     }
 }

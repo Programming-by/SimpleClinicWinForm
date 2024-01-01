@@ -34,7 +34,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.lblDoctorsCount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAddNewPerson = new System.Windows.Forms.Button();
+            this.btnAddNewDoctor = new System.Windows.Forms.Button();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewDoctorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -103,13 +103,14 @@
             this.label2.TabIndex = 40;
             this.label2.Text = "# Records: ";
             // 
-            // btnAddNewPerson
+            // btnAddNewDoctor
             // 
-            this.btnAddNewPerson.Location = new System.Drawing.Point(1047, 72);
-            this.btnAddNewPerson.Name = "btnAddNewPerson";
-            this.btnAddNewPerson.Size = new System.Drawing.Size(111, 73);
-            this.btnAddNewPerson.TabIndex = 39;
-            this.btnAddNewPerson.UseVisualStyleBackColor = true;
+            this.btnAddNewDoctor.Location = new System.Drawing.Point(1047, 72);
+            this.btnAddNewDoctor.Name = "btnAddNewDoctor";
+            this.btnAddNewDoctor.Size = new System.Drawing.Size(111, 73);
+            this.btnAddNewDoctor.TabIndex = 39;
+            this.btnAddNewDoctor.UseVisualStyleBackColor = true;
+            this.btnAddNewDoctor.Click += new System.EventHandler(this.btnAddNewDoctor_Click);
             // 
             // deleteToolStripMenuItem
             // 
@@ -123,12 +124,14 @@
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
             this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // addNewDoctorToolStripMenuItem
             // 
             this.addNewDoctorToolStripMenuItem.Name = "addNewDoctorToolStripMenuItem";
             this.addNewDoctorToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
             this.addNewDoctorToolStripMenuItem.Text = "Add New Doctor";
+            this.addNewDoctorToolStripMenuItem.Click += new System.EventHandler(this.addNewDoctorToolStripMenuItem_Click);
             // 
             // showDoctorDetailsToolStripMenuItem
             // 
@@ -145,7 +148,7 @@
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(215, 100);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(215, 128);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // txtFilter1
@@ -193,7 +196,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblDoctorsCount);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnAddNewPerson);
+            this.Controls.Add(this.btnAddNewDoctor);
             this.Controls.Add(this.txtFilter1);
             this.Controls.Add(this.dgvDoctors);
             this.Controls.Add(this.label1);
@@ -214,7 +217,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblDoctorsCount;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnAddNewPerson;
+        private System.Windows.Forms.Button btnAddNewDoctor;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewDoctorToolStripMenuItem;
