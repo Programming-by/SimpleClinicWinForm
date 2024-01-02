@@ -109,11 +109,6 @@ namespace SimpleClinicWinForm.Doctors
 
         }
 
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Do you want to delete this doctor?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)

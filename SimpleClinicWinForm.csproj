@@ -77,6 +77,12 @@
       <DependentUpon>frmMainMenue.cs</DependentUpon>
     </Compile>
     <Compile Include="Global Classes\clsValidation.cs" />
+    <Compile Include="Patients\frmListPatients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patients\frmListPatients.Designer.cs">
+      <DependentUpon>frmListPatients.cs</DependentUpon>
+    </Compile>
     <Compile Include="People\Controls\ctrlPersonCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainMenue.resx">
       <DependentUpon>frmMainMenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patients\frmListPatients.resx">
+      <DependentUpon>frmListPatients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\Controls\ctrlPersonCard.resx">
       <DependentUpon>ctrlPersonCard.cs</DependentUpon>

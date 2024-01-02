@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.peopleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doctorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.patientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,26 +40,34 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.peopleToolStripMenuItem,
-            this.doctorsToolStripMenuItem});
+            this.doctorsToolStripMenuItem,
+            this.patientsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // peopleToolStripMenuItem
             // 
             this.peopleToolStripMenuItem.Name = "peopleToolStripMenuItem";
-            this.peopleToolStripMenuItem.Size = new System.Drawing.Size(68, 26);
+            this.peopleToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
             this.peopleToolStripMenuItem.Text = "People";
             this.peopleToolStripMenuItem.Click += new System.EventHandler(this.peopleToolStripMenuItem_Click);
             // 
             // doctorsToolStripMenuItem
             // 
             this.doctorsToolStripMenuItem.Name = "doctorsToolStripMenuItem";
-            this.doctorsToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
+            this.doctorsToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.doctorsToolStripMenuItem.Text = "Doctors";
             this.doctorsToolStripMenuItem.Click += new System.EventHandler(this.doctorsToolStripMenuItem_Click);
+            // 
+            // patientsToolStripMenuItem
+            // 
+            this.patientsToolStripMenuItem.Name = "patientsToolStripMenuItem";
+            this.patientsToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.patientsToolStripMenuItem.Text = "Patients";
+            this.patientsToolStripMenuItem.Click += new System.EventHandler(this.patientsToolStripMenuItem_Click);
             // 
             // frmMainMenue
             // 
@@ -83,6 +92,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem peopleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem doctorsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem patientsToolStripMenuItem;
     }
 }
 
