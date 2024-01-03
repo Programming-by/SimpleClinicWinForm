@@ -1,4 +1,5 @@
-﻿using SimpleClinicWinForm.Doctors;
+﻿using SimpleClinicWinForm.Appointments;
+using SimpleClinicWinForm.Doctors;
 using SimpleClinicWinForm.MedicalRecords;
 using SimpleClinicWinForm.Patients;
 using SimpleClinicWinForm.Payments;
@@ -51,6 +52,12 @@ namespace SimpleClinicWinForm
         private void paymentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListPayments frm = new frmListPayments();
+            frm.ShowDialog();
+        }
+
+        private void appointmentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListAppointments frm = new frmListAppointments();
             frm.ShowDialog();
         }
     }
