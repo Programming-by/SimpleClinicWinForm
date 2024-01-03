@@ -106,6 +106,33 @@ namespace SimpleClinicWinForm.Patients
                 e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
+
+        private void btnAddNewPatient_Click(object sender, EventArgs e)
+        {
+            frmAddEditPatient frm = new frmAddEditPatient();
+            frm.ShowDialog();
+            frmListPatients_Load(null, null);
+
+        }
+
+        private void addNewPatientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddEditPatient frm = new frmAddEditPatient();
+            frm.ShowDialog();
+            frmListPatients_Load(null, null);
+        }
+        private void showPatientDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddEditPatient frm = new frmAddEditPatient((int)dgvPatients.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            frmListPatients_Load(null, null);
+        }
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Do you want to delete this patient?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
@@ -113,7 +140,7 @@ namespace SimpleClinicWinForm.Patients
 
             if (clsPatients.DeletePatients((int)dgvPatients.CurrentRow.Cells[0].Value))
             {
-                MessageBox.Show("Patients Deleted Successfully", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Patient Deleted Successfully", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 frmListPatients_Load(null, null);
             }
             else
