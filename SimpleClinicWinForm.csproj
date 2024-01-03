@@ -77,6 +77,12 @@
       <DependentUpon>frmMainMenue.cs</DependentUpon>
     </Compile>
     <Compile Include="Global Classes\clsValidation.cs" />
+    <Compile Include="Patients\Controls\ctrlPatientCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Patients\Controls\ctrlPatientCard.Designer.cs">
+      <DependentUpon>ctrlPatientCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patients\frmAddEditPatient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,12 @@
     </Compile>
     <Compile Include="Patients\frmListPatients.Designer.cs">
       <DependentUpon>frmListPatients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patients\frmShowPatientDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patients\frmShowPatientDetails.Designer.cs">
+      <DependentUpon>frmShowPatientDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="People\Controls\ctrlPersonCard.cs">
       <SubType>UserControl</SubType>
@@ -136,11 +148,17 @@
     <EmbeddedResource Include="frmMainMenue.resx">
       <DependentUpon>frmMainMenue.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Patients\Controls\ctrlPatientCard.resx">
+      <DependentUpon>ctrlPatientCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Patients\frmAddEditPatient.resx">
       <DependentUpon>frmAddEditPatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patients\frmListPatients.resx">
       <DependentUpon>frmListPatients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patients\frmShowPatientDetails.resx">
+      <DependentUpon>frmShowPatientDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\Controls\ctrlPersonCard.resx">
       <DependentUpon>ctrlPersonCard.cs</DependentUpon>

@@ -123,10 +123,9 @@ namespace SimpleClinicWinForm.Patients
         }
         private void showPatientDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmShowPatientDetails frm = new frmShowPatientDetails((int)dgvPatients.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
         }
-
-
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAddEditPatient frm = new frmAddEditPatient((int)dgvPatients.CurrentRow.Cells[0].Value);
@@ -145,6 +144,12 @@ namespace SimpleClinicWinForm.Patients
             }
             else
                 MessageBox.Show("Failed to Delete this Patient", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void dgvPatients_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmShowPatientDetails frm = new frmShowPatientDetails((int)dgvPatients.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
         }
     }
 }

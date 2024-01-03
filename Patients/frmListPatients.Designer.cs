@@ -126,7 +126,7 @@
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(213, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -160,7 +160,7 @@
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(214, 128);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(214, 100);
             // 
             // txtFilter1
             // 
@@ -185,6 +185,7 @@
             this.dgvPatients.RowTemplate.Height = 24;
             this.dgvPatients.Size = new System.Drawing.Size(1146, 295);
             this.dgvPatients.TabIndex = 47;
+            this.dgvPatients.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPatients_CellDoubleClick);
             // 
             // frmListPatients
             // 
