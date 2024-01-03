@@ -95,6 +95,15 @@ namespace SimpleClinicWinForm.MedicalRecords
             }
         }
 
+        private void addNewRecordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Do you want to delete this record?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)

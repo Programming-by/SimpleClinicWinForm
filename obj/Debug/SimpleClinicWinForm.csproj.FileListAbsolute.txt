@@ -28,3 +28,4 @@ C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Pat
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Patients.Controls.ctrlPatientCard.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Patients.frmShowPatientDetails.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.MedicalRecords.frmListMedicalRecords.resources
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Payments.frmListPayments.resources

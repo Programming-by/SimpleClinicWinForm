@@ -37,8 +37,7 @@
             this.btnAddNewMedicalRecord = new System.Windows.Forms.Button();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addNewDoctorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showDoctorDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addNewRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.txtFilter1 = new System.Windows.Forms.TextBox();
             this.dgvMedicalRecords = new System.Windows.Forms.DataGridView();
@@ -111,38 +110,33 @@
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
-            // addNewDoctorToolStripMenuItem
+            // addNewRecordToolStripMenuItem
             // 
-            this.addNewDoctorToolStripMenuItem.Name = "addNewDoctorToolStripMenuItem";
-            this.addNewDoctorToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
-            this.addNewDoctorToolStripMenuItem.Text = "Add New Doctor";
-            // 
-            // showDoctorDetailsToolStripMenuItem
-            // 
-            this.showDoctorDetailsToolStripMenuItem.Name = "showDoctorDetailsToolStripMenuItem";
-            this.showDoctorDetailsToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
-            this.showDoctorDetailsToolStripMenuItem.Text = "Show Doctor Details";
+            this.addNewRecordToolStripMenuItem.Name = "addNewRecordToolStripMenuItem";
+            this.addNewRecordToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.addNewRecordToolStripMenuItem.Text = "Add New Record";
+            this.addNewRecordToolStripMenuItem.Click += new System.EventHandler(this.addNewRecordToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showDoctorDetailsToolStripMenuItem,
-            this.addNewDoctorToolStripMenuItem,
+            this.addNewRecordToolStripMenuItem,
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(215, 128);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 104);
             // 
             // txtFilter1
             // 
@@ -213,8 +207,7 @@
         private System.Windows.Forms.Button btnAddNewMedicalRecord;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addNewDoctorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem showDoctorDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addNewRecordToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox txtFilter1;
         private System.Windows.Forms.DataGridView dgvMedicalRecords;
