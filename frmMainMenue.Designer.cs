@@ -32,6 +32,7 @@
             this.peopleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doctorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.patientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.medicalRecordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +42,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.peopleToolStripMenuItem,
             this.doctorsToolStripMenuItem,
-            this.patientsToolStripMenuItem});
+            this.patientsToolStripMenuItem,
+            this.medicalRecordsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -69,6 +71,13 @@
             this.patientsToolStripMenuItem.Text = "Patients";
             this.patientsToolStripMenuItem.Click += new System.EventHandler(this.patientsToolStripMenuItem_Click);
             // 
+            // medicalRecordsToolStripMenuItem
+            // 
+            this.medicalRecordsToolStripMenuItem.Name = "medicalRecordsToolStripMenuItem";
+            this.medicalRecordsToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
+            this.medicalRecordsToolStripMenuItem.Text = "Medical Records";
+            this.medicalRecordsToolStripMenuItem.Click += new System.EventHandler(this.medicalRecordsToolStripMenuItem_Click);
+            // 
             // frmMainMenue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -93,6 +102,7 @@
         private System.Windows.Forms.ToolStripMenuItem peopleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem doctorsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem patientsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem medicalRecordsToolStripMenuItem;
     }
 }
 
