@@ -35,6 +35,7 @@
             this.medicalRecordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.appointmentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prescriptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,8 @@
             this.patientsToolStripMenuItem,
             this.medicalRecordsToolStripMenuItem,
             this.paymentsToolStripMenuItem,
-            this.appointmentsToolStripMenuItem});
+            this.appointmentsToolStripMenuItem,
+            this.prescriptionsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -96,6 +98,13 @@
             this.appointmentsToolStripMenuItem.Text = "Appointments";
             this.appointmentsToolStripMenuItem.Click += new System.EventHandler(this.appointmentsToolStripMenuItem_Click);
             // 
+            // prescriptionsToolStripMenuItem
+            // 
+            this.prescriptionsToolStripMenuItem.Name = "prescriptionsToolStripMenuItem";
+            this.prescriptionsToolStripMenuItem.Size = new System.Drawing.Size(107, 24);
+            this.prescriptionsToolStripMenuItem.Text = "Prescriptions";
+            this.prescriptionsToolStripMenuItem.Click += new System.EventHandler(this.prescriptionsToolStripMenuItem_Click);
+            // 
             // frmMainMenue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -123,6 +132,7 @@
         private System.Windows.Forms.ToolStripMenuItem medicalRecordsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paymentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem appointmentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prescriptionsToolStripMenuItem;
     }
 }
 

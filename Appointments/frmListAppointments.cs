@@ -19,7 +19,7 @@ namespace SimpleClinicWinForm.Appointments
             InitializeComponent();
         }
 
-        public DataTable _dtAppointments;
+        private DataTable _dtAppointments;
         private void frmListAppointments_Load(object sender, EventArgs e)
         {
             cbFilters.SelectedIndex = 0;
@@ -68,8 +68,8 @@ namespace SimpleClinicWinForm.Appointments
             switch (cbFilters.Text)
             {
 
-                case "AppointmentID":
-                    FilterColumn = "AppointmentID";
+                case "PrescriptionID":
+                    FilterColumn = "PrescriptionID";
                     break;
                  case "Patient Name":
                     FilterColumn = "PatientName";

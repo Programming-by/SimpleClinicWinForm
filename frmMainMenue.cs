@@ -4,6 +4,7 @@ using SimpleClinicWinForm.MedicalRecords;
 using SimpleClinicWinForm.Patients;
 using SimpleClinicWinForm.Payments;
 using SimpleClinicWinForm.People;
+using SimpleClinicWinForm.Prescriptions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -59,6 +60,12 @@ namespace SimpleClinicWinForm
         {
             frmListAppointments frm = new frmListAppointments();
             frm.ShowDialog();
+        }
+
+        private void prescriptionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListPrescriptions frm = new frmListPrescriptions();
+            frm.ShowDialog();   
         }
     }
 }
