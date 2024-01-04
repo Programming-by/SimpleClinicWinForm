@@ -1,4 +1,5 @@
 ﻿using SimpleClinicBusinessLayer;
+using SimpleClinicWinForm.MedicalRecords;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -53,12 +54,16 @@ namespace SimpleClinicWinForm.Payments
 
         private void btnAddNewPayment_Click(object sender, EventArgs e)
         {
-
+            frmAddEditPayment frm = new frmAddEditPayment();
+            frm.ShowDialog();
+            frmListPayments_Load(null,null);
         }
 
         private void addNewPaymentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmAddEditPayment frm = new frmAddEditPayment();
+            frm.ShowDialog();
+            frmListPayments_Load(null, null);
         }
 
         private void cbFilters_SelectedIndexChanged(object sender, EventArgs e)
@@ -117,6 +122,17 @@ namespace SimpleClinicWinForm.Payments
             }
             else
                 MessageBox.Show("Failed to Delete this Payment", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            frmAddEditPayment frm = new frmAddEditPayment((int)dgvPayments.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            frmListPayments_Load(null, null);
+
+
         }
     }
 }
