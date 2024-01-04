@@ -61,7 +61,9 @@ namespace SimpleClinicWinForm.MedicalRecords
 
         private void btnAddNewMedicalRecord_Click(object sender, EventArgs e)
         {
-
+            frmAddEditMedicalRecord frm = new frmAddEditMedicalRecord();
+            frm.ShowDialog();
+            frmListMedicalRecords_Load(null,null);
         }
 
         private void txtFilter1_KeyPress(object sender, KeyPressEventArgs e)
@@ -102,7 +104,9 @@ namespace SimpleClinicWinForm.MedicalRecords
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmAddEditMedicalRecord frm = new frmAddEditMedicalRecord((int)dgvMedicalRecords.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            frmListMedicalRecords_Load(null, null);
         }
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
