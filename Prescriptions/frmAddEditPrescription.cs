@@ -52,8 +52,8 @@ namespace SimpleClinicWinForm.Prescriptions
                 this.Text = lblTitle.Text;
             }
             tpPrescriptionInfo.Enabled = false;
-           // dateTimePickerStartDate.MinDate = DateTime.Now.AddYears(-5);
-            //dateTimePickerEndDate.MinDate = DateTime.Now.AddYears(dateTimePickerStartDate.Value.Date.Year +  5);
+            dateTimePickerStartDate.Value = DateTime.Now.AddYears(-5);
+            dateTimePickerEndDate.Value = DateTime.Now;
 
         }
 
