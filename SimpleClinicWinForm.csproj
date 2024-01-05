@@ -89,6 +89,12 @@
     <Compile Include="MedicalRecords\Controls\ctrlMedicalRecordCard.Designer.cs">
       <DependentUpon>ctrlMedicalRecordCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="MedicalRecords\Controls\ctrlMedicalRecordCardWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MedicalRecords\Controls\ctrlMedicalRecordCardWithFilter.Designer.cs">
+      <DependentUpon>ctrlMedicalRecordCardWithFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="MedicalRecords\frmAddEditMedicalRecord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MedicalRecords\Controls\ctrlMedicalRecordCard.resx">
       <DependentUpon>ctrlMedicalRecordCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecords\Controls\ctrlMedicalRecordCardWithFilter.resx">
+      <DependentUpon>ctrlMedicalRecordCardWithFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MedicalRecords\frmAddEditMedicalRecord.resx">
       <DependentUpon>frmAddEditMedicalRecord.cs</DependentUpon>

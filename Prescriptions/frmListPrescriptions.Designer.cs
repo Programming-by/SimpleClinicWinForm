@@ -34,7 +34,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.lblPrescriptionsCount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAddNewPayment = new System.Windows.Forms.Button();
+            this.btnAddNewPrescription = new System.Windows.Forms.Button();
             this.dgvPrescriptions = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addNewPrescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -101,14 +101,14 @@
             this.label2.TabIndex = 76;
             this.label2.Text = "# Records: ";
             // 
-            // btnAddNewPayment
+            // btnAddNewPrescription
             // 
-            this.btnAddNewPayment.Location = new System.Drawing.Point(712, 71);
-            this.btnAddNewPayment.Name = "btnAddNewPayment";
-            this.btnAddNewPayment.Size = new System.Drawing.Size(111, 73);
-            this.btnAddNewPayment.TabIndex = 75;
-            this.btnAddNewPayment.UseVisualStyleBackColor = true;
-            this.btnAddNewPayment.Click += new System.EventHandler(this.btnAddNewPayment_Click);
+            this.btnAddNewPrescription.Location = new System.Drawing.Point(712, 71);
+            this.btnAddNewPrescription.Name = "btnAddNewPrescription";
+            this.btnAddNewPrescription.Size = new System.Drawing.Size(111, 73);
+            this.btnAddNewPrescription.TabIndex = 75;
+            this.btnAddNewPrescription.UseVisualStyleBackColor = true;
+            this.btnAddNewPrescription.Click += new System.EventHandler(this.btnAddNewPrescription_Click);
             // 
             // dgvPrescriptions
             // 
@@ -132,7 +132,7 @@
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(223, 104);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(223, 76);
             // 
             // addNewPrescriptionToolStripMenuItem
             // 
@@ -185,7 +185,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblPrescriptionsCount);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnAddNewPayment);
+            this.Controls.Add(this.btnAddNewPrescription);
             this.Controls.Add(this.dgvPrescriptions);
             this.Controls.Add(this.txtFilter1);
             this.Controls.Add(this.label1);
@@ -206,7 +206,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblPrescriptionsCount;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnAddNewPayment;
+        private System.Windows.Forms.Button btnAddNewPrescription;
         private System.Windows.Forms.DataGridView dgvPrescriptions;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem addNewPrescriptionToolStripMenuItem;

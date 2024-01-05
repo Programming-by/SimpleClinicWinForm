@@ -125,8 +125,7 @@ namespace SimpleClinicWinForm.Prescriptions
         {
             this.Close();
         }
-
-        private void btnAddNewPayment_Click(object sender, EventArgs e)
+        private void btnAddNewPrescription_Click(object sender, EventArgs e)
         {
             frmAddEditPrescription frm = new frmAddEditPrescription();
             frm.ShowDialog();
@@ -139,5 +138,6 @@ namespace SimpleClinicWinForm.Prescriptions
             frm.ShowDialog();
             frmListPrescriptions_Load(null, null);
         }
+
     }
 }

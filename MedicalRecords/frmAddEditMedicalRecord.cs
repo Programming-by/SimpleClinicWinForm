@@ -20,6 +20,10 @@ namespace SimpleClinicWinForm.MedicalRecords
         int _MedicalRecordID;
 
         clsMedicalRecords _Record;
+
+        public delegate void DataBackHandler(object sender, int? MedicalRecordID);
+
+        public DataBackHandler DataBack;
         public frmAddEditMedicalRecord()
         {
             InitializeComponent();
@@ -81,6 +85,7 @@ namespace SimpleClinicWinForm.MedicalRecords
             if (_Record.Save())
             {
                 lblMedicalRecordID.Text = _Record.MedicalRecordID.ToString();
+                DataBack?.Invoke(this,_Record.MedicalRecordID);
                 Mode = enMode.Update;
                 lblTitle.Text = "Update MedicalRecord";
                 this.Text = "Update MedicalRecord";

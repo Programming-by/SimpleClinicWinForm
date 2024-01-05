@@ -19,9 +19,9 @@ namespace SimpleClinicWinForm.MedicalRecords.Controls
             get { return _MedicalRecord; }
         }
 
-        private int _MedicalRecordID;
+        private int? _MedicalRecordID = -1;
 
-        public int MedicalRecordID
+        public int? MedicalRecordID
         {
             get { return _MedicalRecordID; }
         }
@@ -30,7 +30,7 @@ namespace SimpleClinicWinForm.MedicalRecords.Controls
             InitializeComponent();
         }
 
-        public void LoadMedicalRecordInfo(int MedicalRecordID)
+        public void LoadMedicalRecordInfo(int? MedicalRecordID)
         {
             _MedicalRecord = clsMedicalRecords.Find(MedicalRecordID);
 
@@ -39,7 +39,8 @@ namespace SimpleClinicWinForm.MedicalRecords.Controls
                 MessageBox.Show("Medical Record is not Found","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             }
-         
+
+            _MedicalRecordID = MedicalRecordID;
          lblMedicalRecordID.Text = MedicalRecordID.ToString();
          lblVisitDescription.Text =   _MedicalRecord.VisitDescription;
          lblDiagnosis.Text = _MedicalRecord.Diagnosis;
