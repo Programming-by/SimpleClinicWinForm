@@ -12,7 +12,16 @@ namespace SimpleClinicWinForm.MedicalRecords.Controls
 {
     public partial class ctrlMedicalRecordCardWithFilter : UserControl
     {
+        private bool _FilterEnabled = true;
 
+        public bool FilterEnabled
+        {
+            get { return _FilterEnabled; }
+            set {
+                _FilterEnabled = value;
+                gbFilter.Enabled = _FilterEnabled;
+               }
+        }
         public int? MedicalRecordID
         {
             get { return ctrlMedicalRecordCard1.MedicalRecordID; }
@@ -20,6 +29,11 @@ namespace SimpleClinicWinForm.MedicalRecords.Controls
         public ctrlMedicalRecordCardWithFilter()
         {
             InitializeComponent();
+        }
+
+        public void LoadMedicalRecordInfo(int PrescriptionID)
+        {
+            ctrlMedicalRecordCard1.LoadMedicalRecordInfo(PrescriptionID);
         }
 
         private void txtMedicalRecord_KeyPress(object sender, KeyPressEventArgs e)

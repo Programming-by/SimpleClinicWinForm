@@ -18,9 +18,20 @@ namespace SimpleClinicWinForm.Prescriptions
         enMode Mode = enMode.AddNew;
 
         clsPrescriptions _Prescription;
+
+        int _PrescriptionID;
         public frmAddEditPrescription()
         {
             InitializeComponent();
+            Mode = enMode.AddNew;
+        }
+
+        public frmAddEditPrescription(int PrescriptionID)
+        {
+
+            InitializeComponent();
+            _PrescriptionID = PrescriptionID;
+            Mode = enMode.Update;
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -48,6 +59,23 @@ namespace SimpleClinicWinForm.Prescriptions
 
         private void _LoadData()
         {
+            _Prescription = clsPrescriptions.Find(_PrescriptionID);
+
+            if (_Prescription == null)
+            {
+                MessageBox.Show("Prescription is not found","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+            ctrlMedicalRecordCardWithFilter1.FilterEnabled = false;
+            ctrlMedicalRecordCardWithFilter1.LoadMedicalRecordInfo(_PrescriptionID);
+            lblPrescriptionID.Text = _Prescription.PrescriptionID.ToString();
+            txtMedicationName.Text = _Prescription.MedicationName;
+            txtDosage.Text = _Prescription.Dosage;
+            txtFrequency.Text = _Prescription.Frequency;
+            dateTimePickerStartDate.Value = _Prescription.StartDate;
+            dateTimePickerEndDate.Value = _Prescription.EndDate;
+            txtSpecialInstructions.Text = _Prescription.SpecialInstructions;
+
 
         }
         private void frmAddEditPrescription_Load(object sender, EventArgs e)
@@ -73,6 +101,14 @@ namespace SimpleClinicWinForm.Prescriptions
         private void btnNext_Click(object sender, EventArgs e)
         {
 
+            if (Mode == enMode.Update)
+            {
+                tpPrescriptionInfo.Enabled = true;
+                tbMedicalRecordInfo.SelectedTab = tbMedicalRecordInfo.TabPages["tpPrescriptionInfo"];
+                btnSave.Enabled = true;
+                return;
+            }
+
             if (ctrlMedicalRecordCardWithFilter1.MedicalRecordID != -1)
             {
                 if (clsPrescriptions.IsPrescriptionsExistByMedicalRecordID(ctrlMedicalRecordCardWithFilter1.MedicalRecordID))
@@ -96,6 +132,7 @@ namespace SimpleClinicWinForm.Prescriptions
             _Prescription.MedicalRecordID = ctrlMedicalRecordCardWithFilter1.MedicalRecordID;
             _Prescription.MedicationName = txtMedicationName.Text;
             _Prescription.Dosage = txtDosage.Text;
+            _Prescription.Frequency = txtFrequency.Text;
             _Prescription.StartDate = dateTimePickerStartDate.Value;
             _Prescription.EndDate = dateTimePickerEndDate.Value;
             _Prescription.SpecialInstructions = txtSpecialInstructions.Text;

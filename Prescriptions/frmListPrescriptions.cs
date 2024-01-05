@@ -139,5 +139,11 @@ namespace SimpleClinicWinForm.Prescriptions
             frmListPrescriptions_Load(null, null);
         }
 
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddEditPrescription frm = new frmAddEditPrescription((int)dgvPrescriptions.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            frmListPrescriptions_Load(null, null);
+        }
     }
 }

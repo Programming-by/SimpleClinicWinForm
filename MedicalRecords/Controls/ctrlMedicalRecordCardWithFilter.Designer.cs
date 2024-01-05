@@ -35,14 +35,16 @@
             this.ctrlMedicalRecordCard1 = new SimpleClinicWinForm.MedicalRecords.Controls.ctrlMedicalRecordCard();
             this.btnAdd = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.gbFilter = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.gbFilter.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(41, 36);
+            this.label1.Location = new System.Drawing.Point(6, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(167, 25);
             this.label1.TabIndex = 1;
@@ -50,7 +52,7 @@
             // 
             // txtMedicalRecord
             // 
-            this.txtMedicalRecord.Location = new System.Drawing.Point(235, 40);
+            this.txtMedicalRecord.Location = new System.Drawing.Point(179, 36);
             this.txtMedicalRecord.Multiline = true;
             this.txtMedicalRecord.Name = "txtMedicalRecord";
             this.txtMedicalRecord.Size = new System.Drawing.Size(276, 30);
@@ -60,7 +62,7 @@
             // 
             // btnFindMedicalRecord
             // 
-            this.btnFindMedicalRecord.Location = new System.Drawing.Point(517, 26);
+            this.btnFindMedicalRecord.Location = new System.Drawing.Point(474, 22);
             this.btnFindMedicalRecord.Name = "btnFindMedicalRecord";
             this.btnFindMedicalRecord.Size = new System.Drawing.Size(101, 51);
             this.btnFindMedicalRecord.TabIndex = 3;
@@ -77,7 +79,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(624, 26);
+            this.btnAdd.Location = new System.Drawing.Point(581, 22);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(101, 51);
             this.btnAdd.TabIndex = 4;
@@ -89,20 +91,31 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // gbFilter
+            // 
+            this.gbFilter.Controls.Add(this.label1);
+            this.gbFilter.Controls.Add(this.btnAdd);
+            this.gbFilter.Controls.Add(this.txtMedicalRecord);
+            this.gbFilter.Controls.Add(this.btnFindMedicalRecord);
+            this.gbFilter.Location = new System.Drawing.Point(42, 3);
+            this.gbFilter.Name = "gbFilter";
+            this.gbFilter.Size = new System.Drawing.Size(693, 82);
+            this.gbFilter.TabIndex = 5;
+            this.gbFilter.TabStop = false;
+            this.gbFilter.Text = "Filter";
+            // 
             // ctrlMedicalRecordCardWithFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.btnFindMedicalRecord);
-            this.Controls.Add(this.txtMedicalRecord);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.gbFilter);
             this.Controls.Add(this.ctrlMedicalRecordCard1);
             this.Name = "ctrlMedicalRecordCardWithFilter";
             this.Size = new System.Drawing.Size(735, 362);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.gbFilter.ResumeLayout(false);
+            this.gbFilter.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -114,5 +127,6 @@
         private System.Windows.Forms.Button btnFindMedicalRecord;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.GroupBox gbFilter;
     }
 }
