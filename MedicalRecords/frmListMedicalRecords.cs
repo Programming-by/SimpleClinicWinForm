@@ -121,5 +121,19 @@ namespace SimpleClinicWinForm.MedicalRecords
             else
                 MessageBox.Show("Failed to Delete this Record", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void showMedicalRecordDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmShowMedicalRecordDetails frm = new FrmShowMedicalRecordDetails((int)dgvMedicalRecords.CurrentRow.Cells[0].Value);
+
+            frm.ShowDialog();
+        }
+
+        private void dgvMedicalRecords_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            FrmShowMedicalRecordDetails frm = new FrmShowMedicalRecordDetails((int)dgvMedicalRecords.CurrentRow.Cells[0].Value);
+
+            frm.ShowDialog();
+        }
     }
 }

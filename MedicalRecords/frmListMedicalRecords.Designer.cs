@@ -39,6 +39,7 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showMedicalRecordDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtFilter1 = new System.Windows.Forms.TextBox();
             this.dgvMedicalRecords = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -110,21 +111,21 @@
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(272, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(272, 24);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // addNewRecordToolStripMenuItem
             // 
             this.addNewRecordToolStripMenuItem.Name = "addNewRecordToolStripMenuItem";
-            this.addNewRecordToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.addNewRecordToolStripMenuItem.Size = new System.Drawing.Size(272, 24);
             this.addNewRecordToolStripMenuItem.Text = "Add New Record";
             this.addNewRecordToolStripMenuItem.Click += new System.EventHandler(this.addNewRecordToolStripMenuItem_Click);
             // 
@@ -132,11 +133,19 @@
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showMedicalRecordDetailsToolStripMenuItem,
             this.addNewRecordToolStripMenuItem,
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 104);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(273, 100);
+            // 
+            // showMedicalRecordDetailsToolStripMenuItem
+            // 
+            this.showMedicalRecordDetailsToolStripMenuItem.Name = "showMedicalRecordDetailsToolStripMenuItem";
+            this.showMedicalRecordDetailsToolStripMenuItem.Size = new System.Drawing.Size(272, 24);
+            this.showMedicalRecordDetailsToolStripMenuItem.Text = "Show Medical Record Details";
+            this.showMedicalRecordDetailsToolStripMenuItem.Click += new System.EventHandler(this.showMedicalRecordDetailsToolStripMenuItem_Click);
             // 
             // txtFilter1
             // 
@@ -161,6 +170,7 @@
             this.dgvMedicalRecords.RowTemplate.Height = 24;
             this.dgvMedicalRecords.Size = new System.Drawing.Size(805, 295);
             this.dgvMedicalRecords.TabIndex = 47;
+            this.dgvMedicalRecords.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMedicalRecords_CellDoubleClick);
             // 
             // label1
             // 
@@ -212,5 +222,6 @@
         private System.Windows.Forms.TextBox txtFilter1;
         private System.Windows.Forms.DataGridView dgvMedicalRecords;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem showMedicalRecordDetailsToolStripMenuItem;
     }
 }

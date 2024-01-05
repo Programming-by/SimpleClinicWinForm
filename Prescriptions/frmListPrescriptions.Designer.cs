@@ -37,7 +37,7 @@
             this.btnAddNewPayment = new System.Windows.Forms.Button();
             this.dgvPrescriptions = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.addNewPaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addNewPrescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtFilter1 = new System.Windows.Forms.TextBox();
@@ -108,6 +108,7 @@
             this.btnAddNewPayment.Size = new System.Drawing.Size(111, 73);
             this.btnAddNewPayment.TabIndex = 75;
             this.btnAddNewPayment.UseVisualStyleBackColor = true;
+            this.btnAddNewPayment.Click += new System.EventHandler(this.btnAddNewPayment_Click);
             // 
             // dgvPrescriptions
             // 
@@ -127,28 +128,29 @@
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addNewPaymentToolStripMenuItem,
+            this.addNewPrescriptionToolStripMenuItem,
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(201, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(223, 104);
             // 
-            // addNewPaymentToolStripMenuItem
+            // addNewPrescriptionToolStripMenuItem
             // 
-            this.addNewPaymentToolStripMenuItem.Name = "addNewPaymentToolStripMenuItem";
-            this.addNewPaymentToolStripMenuItem.Size = new System.Drawing.Size(200, 24);
-            this.addNewPaymentToolStripMenuItem.Text = "Add New Payment";
+            this.addNewPrescriptionToolStripMenuItem.Name = "addNewPrescriptionToolStripMenuItem";
+            this.addNewPrescriptionToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
+            this.addNewPrescriptionToolStripMenuItem.Text = "Add New Prescription";
+            this.addNewPrescriptionToolStripMenuItem.Click += new System.EventHandler(this.addNewPrescriptionToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(200, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(200, 24);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -207,7 +209,7 @@
         private System.Windows.Forms.Button btnAddNewPayment;
         private System.Windows.Forms.DataGridView dgvPrescriptions;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem addNewPaymentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addNewPrescriptionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.TextBox txtFilter1;

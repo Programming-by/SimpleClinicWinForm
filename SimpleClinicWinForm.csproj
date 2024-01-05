@@ -83,6 +83,12 @@
       <DependentUpon>frmMainMenue.cs</DependentUpon>
     </Compile>
     <Compile Include="Global Classes\clsValidation.cs" />
+    <Compile Include="MedicalRecords\Controls\ctrlMedicalRecordCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MedicalRecords\Controls\ctrlMedicalRecordCard.Designer.cs">
+      <DependentUpon>ctrlMedicalRecordCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="MedicalRecords\frmAddEditMedicalRecord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,12 @@
     </Compile>
     <Compile Include="MedicalRecords\frmListMedicalRecords.Designer.cs">
       <DependentUpon>frmListMedicalRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecords\FrmShowMedicalRecordDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicalRecords\FrmShowMedicalRecordDetails.Designer.cs">
+      <DependentUpon>FrmShowMedicalRecordDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Patients\Controls\ctrlPatientCard.cs">
       <SubType>UserControl</SubType>
@@ -161,6 +173,12 @@
     <Compile Include="People\frmListPeople.Designer.cs">
       <DependentUpon>frmListPeople.cs</DependentUpon>
     </Compile>
+    <Compile Include="Prescriptions\frmAddEditPrescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prescriptions\frmAddEditPrescription.Designer.cs">
+      <DependentUpon>frmAddEditPrescription.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prescriptions\frmListPrescriptions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,11 +205,17 @@
     <EmbeddedResource Include="frmMainMenue.resx">
       <DependentUpon>frmMainMenue.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecords\Controls\ctrlMedicalRecordCard.resx">
+      <DependentUpon>ctrlMedicalRecordCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MedicalRecords\frmAddEditMedicalRecord.resx">
       <DependentUpon>frmAddEditMedicalRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MedicalRecords\frmListMedicalRecords.resx">
       <DependentUpon>frmListMedicalRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecords\FrmShowMedicalRecordDetails.resx">
+      <DependentUpon>FrmShowMedicalRecordDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patients\Controls\ctrlPatientCard.resx">
       <DependentUpon>ctrlPatientCard.cs</DependentUpon>
@@ -225,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="People\frmListPeople.resx">
       <DependentUpon>frmListPeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prescriptions\frmAddEditPrescription.resx">
+      <DependentUpon>frmAddEditPrescription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prescriptions\frmListPrescriptions.resx">
       <DependentUpon>frmListPrescriptions.cs</DependentUpon>

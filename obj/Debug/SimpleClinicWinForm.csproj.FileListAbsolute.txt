@@ -33,3 +33,6 @@ C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.App
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Prescriptions.frmListPrescriptions.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.MedicalRecords.frmAddEditMedicalRecord.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Payments.frmAddEditPayment.resources
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.MedicalRecords.Controls.ctrlMedicalRecordCard.resources
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.MedicalRecords.FrmShowMedicalRecordDetails.resources
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Prescriptions.frmAddEditPrescription.resources
