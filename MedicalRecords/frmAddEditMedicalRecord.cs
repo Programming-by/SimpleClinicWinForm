@@ -23,7 +23,7 @@ namespace SimpleClinicWinForm.MedicalRecords
 
         public delegate void DataBackHandler(object sender, int? MedicalRecordID);
 
-        public DataBackHandler DataBack;
+        public event DataBackHandler DataBack;
         public frmAddEditMedicalRecord()
         {
             InitializeComponent();

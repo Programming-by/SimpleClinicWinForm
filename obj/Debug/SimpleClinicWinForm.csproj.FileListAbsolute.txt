@@ -37,3 +37,9 @@ C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.csp
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.csproj.CopyComplete
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.exe
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.pdb
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Appointments.frmAddEditAppointment.resources
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Patients.Controls.ctrlPatientCardWithFilter.resources
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Doctors.Controls.ctrlDoctorCardWithFilter.resources
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Payments.Controls.ctrlPaymentCard.resources
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Payments.frmShowPaymentDetails.resources
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Payments.Controls.ctrlPaymentCardWithFilter.resources

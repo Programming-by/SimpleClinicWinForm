@@ -109,6 +109,7 @@
             this.btnAddNewPayment.Size = new System.Drawing.Size(111, 73);
             this.btnAddNewPayment.TabIndex = 66;
             this.btnAddNewPayment.UseVisualStyleBackColor = true;
+            this.btnAddNewPayment.Click += new System.EventHandler(this.btnAddNewPayment_Click);
             // 
             // dgvAppointments
             // 
@@ -149,7 +150,7 @@
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(200, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 

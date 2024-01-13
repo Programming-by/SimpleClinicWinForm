@@ -13,7 +13,19 @@ namespace SimpleClinicWinForm.Doctors.Controls
 {
     public partial class ctrlDoctorCard : UserControl
     {
-        clsDoctors _Doctor;
+       private clsDoctors _Doctor;
+
+       public clsDoctors SelectedDoctorInfo
+        {
+            get { return _Doctor; }
+        }
+
+        private int _DoctorID = -1;
+
+        public int DoctorID
+        {
+            get { return _DoctorID; }
+        }
         public ctrlDoctorCard()
         {
             InitializeComponent();
@@ -27,6 +39,7 @@ namespace SimpleClinicWinForm.Doctors.Controls
                 MessageBox.Show("Doctor is not found","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             }
+            _DoctorID = _Doctor.DoctorID;   
             lblDoctorID.Text = _Doctor.DoctorID.ToString();
             lblSpecialization.Text = _Doctor.Specialization.ToString();
             ctrlPersonCard1.LoadPersonInfo(_Doctor.PersonID);

@@ -104,9 +104,10 @@
             // 
             // ctrlMedicalRecordCardWithFilter1
             // 
+            this.ctrlMedicalRecordCardWithFilter1.FilterEnabled = true;
             this.ctrlMedicalRecordCardWithFilter1.Location = new System.Drawing.Point(0, 3);
             this.ctrlMedicalRecordCardWithFilter1.Name = "ctrlMedicalRecordCardWithFilter1";
-            this.ctrlMedicalRecordCardWithFilter1.Size = new System.Drawing.Size(704, 362);
+            this.ctrlMedicalRecordCardWithFilter1.Size = new System.Drawing.Size(750, 362);
             this.ctrlMedicalRecordCardWithFilter1.TabIndex = 0;
             // 
             // tpPrescriptionInfo

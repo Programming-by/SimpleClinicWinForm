@@ -19,6 +19,10 @@ namespace SimpleClinicWinForm.Patients
 
         int _PatientID = -1;
         clsPatients _Patient;
+
+        public delegate void DataBackEvent(object sender , int PatientID);
+
+        public event DataBackEvent DataBack;
         public frmAddEditPatient()
         {
             InitializeComponent();
@@ -119,12 +123,12 @@ namespace SimpleClinicWinForm.Patients
                 lblTitle.Text = "Update Patient";
                 this.Text = "Update Patient";
                 MessageBox.Show("Data Saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataBack?.Invoke(this, _PatientID);
             } else
                 MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
-
+           
         }
-
     }
 }

@@ -134,5 +134,19 @@ namespace SimpleClinicWinForm.Payments
 
 
         }
+
+        private void showPaymentDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShowPaymentDetails frm = new frmShowPaymentDetails((int)dgvPayments.CurrentRow.Cells[0].Value);
+
+            frm.ShowDialog();
+        }
+
+        private void dgvPayments_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmShowPaymentDetails frm = new frmShowPaymentDetails((int)dgvPayments.CurrentRow.Cells[0].Value);
+
+            frm.ShowDialog();
+        }
     }
 }

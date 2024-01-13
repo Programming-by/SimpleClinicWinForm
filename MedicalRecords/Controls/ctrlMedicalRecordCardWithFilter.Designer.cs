@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMedicalRecord = new System.Windows.Forms.TextBox();
             this.btnFindMedicalRecord = new System.Windows.Forms.Button();
             this.ctrlMedicalRecordCard1 = new SimpleClinicWinForm.MedicalRecords.Controls.ctrlMedicalRecordCard();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbFilter = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.gbFilter.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +55,6 @@
             this.txtMedicalRecord.Size = new System.Drawing.Size(276, 30);
             this.txtMedicalRecord.TabIndex = 2;
             this.txtMedicalRecord.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMedicalRecord_KeyPress);
-            this.txtMedicalRecord.Validating += new System.ComponentModel.CancelEventHandler(this.txtMedicalRecord_Validating);
             // 
             // btnFindMedicalRecord
             // 
@@ -87,10 +83,6 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // gbFilter
             // 
             this.gbFilter.Controls.Add(this.label1);
@@ -112,7 +104,6 @@
             this.Controls.Add(this.ctrlMedicalRecordCard1);
             this.Name = "ctrlMedicalRecordCardWithFilter";
             this.Size = new System.Drawing.Size(735, 362);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.gbFilter.ResumeLayout(false);
             this.gbFilter.PerformLayout();
             this.ResumeLayout(false);
@@ -126,7 +117,6 @@
         private System.Windows.Forms.TextBox txtMedicalRecord;
         private System.Windows.Forms.Button btnFindMedicalRecord;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.GroupBox gbFilter;
     }
 }

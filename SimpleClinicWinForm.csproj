@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Appointments\frmAddEditAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointments\frmAddEditAppointment.Designer.cs">
+      <DependentUpon>frmAddEditAppointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Appointments\frmListAppointments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,12 @@
     </Compile>
     <Compile Include="Doctors\Controls\ctrlDoctorCard.Designer.cs">
       <DependentUpon>ctrlDoctorCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctors\Controls\ctrlDoctorCardWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Doctors\Controls\ctrlDoctorCardWithFilter.Designer.cs">
+      <DependentUpon>ctrlDoctorCardWithFilter.cs</DependentUpon>
     </Compile>
     <Compile Include="Doctors\frmAddNewDoctor.cs">
       <SubType>Form</SubType>
@@ -119,6 +131,12 @@
     <Compile Include="Patients\Controls\ctrlPatientCard.Designer.cs">
       <DependentUpon>ctrlPatientCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patients\Controls\ctrlPatientCardWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Patients\Controls\ctrlPatientCardWithFilter.Designer.cs">
+      <DependentUpon>ctrlPatientCardWithFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patients\frmAddEditPatient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +155,18 @@
     <Compile Include="Patients\frmShowPatientDetails.Designer.cs">
       <DependentUpon>frmShowPatientDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Payments\Controls\ctrlPaymentCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Payments\Controls\ctrlPaymentCard.Designer.cs">
+      <DependentUpon>ctrlPaymentCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\Controls\ctrlPaymentCardWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Payments\Controls\ctrlPaymentCardWithFilter.Designer.cs">
+      <DependentUpon>ctrlPaymentCardWithFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Payments\frmAddEditPayment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +178,12 @@
     </Compile>
     <Compile Include="Payments\frmListPayments.Designer.cs">
       <DependentUpon>frmListPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\frmShowPaymentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\frmShowPaymentDetails.Designer.cs">
+      <DependentUpon>frmShowPaymentDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="People\Controls\ctrlPersonCard.cs">
       <SubType>UserControl</SubType>
@@ -193,11 +229,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Appointments\frmAddEditAppointment.resx">
+      <DependentUpon>frmAddEditAppointment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Appointments\frmListAppointments.resx">
       <DependentUpon>frmListAppointments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doctors\Controls\ctrlDoctorCard.resx">
       <DependentUpon>ctrlDoctorCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctors\Controls\ctrlDoctorCardWithFilter.resx">
+      <DependentUpon>ctrlDoctorCardWithFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doctors\frmAddNewDoctor.resx">
       <DependentUpon>frmAddNewDoctor.cs</DependentUpon>
@@ -229,6 +271,9 @@
     <EmbeddedResource Include="Patients\Controls\ctrlPatientCard.resx">
       <DependentUpon>ctrlPatientCard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Patients\Controls\ctrlPatientCardWithFilter.resx">
+      <DependentUpon>ctrlPatientCardWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Patients\frmAddEditPatient.resx">
       <DependentUpon>frmAddEditPatient.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,11 +283,20 @@
     <EmbeddedResource Include="Patients\frmShowPatientDetails.resx">
       <DependentUpon>frmShowPatientDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Payments\Controls\ctrlPaymentCard.resx">
+      <DependentUpon>ctrlPaymentCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\Controls\ctrlPaymentCardWithFilter.resx">
+      <DependentUpon>ctrlPaymentCardWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Payments\frmAddEditPayment.resx">
       <DependentUpon>frmAddEditPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Payments\frmListPayments.resx">
       <DependentUpon>frmListPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\frmShowPaymentDetails.resx">
+      <DependentUpon>frmShowPaymentDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\Controls\ctrlPersonCard.resx">
       <DependentUpon>ctrlPersonCard.cs</DependentUpon>

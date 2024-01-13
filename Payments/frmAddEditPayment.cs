@@ -20,6 +20,10 @@ namespace SimpleClinicWinForm.Payments
         int _PaymentID;
 
         clsPayments _Payment;
+
+        public delegate void DataBackHandler(object sender, int? PaymentID);
+
+        public event DataBackHandler DataBack;
         public frmAddEditPayment()
         {
             InitializeComponent();
@@ -110,6 +114,7 @@ namespace SimpleClinicWinForm.Payments
                 lblTitle.Text = "Update Payment";
                 this.Text = "Update Payment";
                 MessageBox.Show("Data Saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataBack?.Invoke(this,_Payment.PaymentID);
             }
             else
                 MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

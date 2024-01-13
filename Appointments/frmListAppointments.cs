@@ -121,5 +121,12 @@ namespace SimpleClinicWinForm.Appointments
             else
                 MessageBox.Show("Failed to Delete this Appointment", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void btnAddNewPayment_Click(object sender, EventArgs e)
+        {
+            frmAddEditAppointment frm = new frmAddEditAppointment();
+
+            frm.ShowDialog();
+        }
     }
 }

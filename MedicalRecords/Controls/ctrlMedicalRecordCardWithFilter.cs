@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimpleClinicBusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,11 @@ namespace SimpleClinicWinForm.MedicalRecords.Controls
         public int? MedicalRecordID
         {
             get { return ctrlMedicalRecordCard1.MedicalRecordID; }
+        }
+
+        public clsMedicalRecords SelectedMedicalRecordInfo
+        {
+            get { return ctrlMedicalRecordCard1.SelectedMedicalRecord; }
         }
         public ctrlMedicalRecordCardWithFilter()
         {
@@ -62,13 +68,6 @@ namespace SimpleClinicWinForm.MedicalRecords.Controls
 
         private void txtMedicalRecord_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrEmpty(txtMedicalRecord.Text))
-            {
-                e.Cancel = true;
-                errorProvider1.SetError(txtMedicalRecord, "please enter medical record id");
-            } else
-                errorProvider1.SetError(txtMedicalRecord, "");
-
 
         }
     }
