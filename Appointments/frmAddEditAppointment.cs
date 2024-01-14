@@ -17,9 +17,19 @@ namespace SimpleClinicWinForm.Appointments
         public enum enMode { AddNew = 0 , Update = 1 }
 
         enMode _Mode;
+
+        int _AppointmentID;
         public frmAddEditAppointment()
         {
             InitializeComponent();
+            _Mode = enMode.AddNew;
+        }
+
+        public frmAddEditAppointment(int AppointmentID)
+        {
+            InitializeComponent();
+             _AppointmentID = AppointmentID;
+            _Mode = enMode.Update;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -48,6 +58,29 @@ namespace SimpleClinicWinForm.Appointments
         }
         private void _LoadData()
         {
+            _Appointment = clsAppointments.Find(_AppointmentID);
+
+            if (_Appointment == null)
+            {
+                MessageBox.Show("Appointment is not exist", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            ctrlPatientCardWithFilter1.FilterEnabled = false;
+            ctrlDoctorCardWithFilter1.FilterEnabled = false;
+           
+
+            ctrlPatientCardWithFilter1.LoadPatientInfo(_Appointment.PatientID);
+            ctrlDoctorCardWithFilter1.LoadDoctorInfo(_Appointment.DoctorID);
+            lblAppointmentStatus.Text = _Appointment.AppointmentStatus.ToString();
+            if (_Appointment.AppointmentDateTime > DateTime.Now)
+                dateTimePickerAppointmentDate.Value = _Appointment.AppointmentDateTime;
+            else
+                dateTimePickerAppointmentDate.Value = DateTime.Now;
+            if (ctrlMedicalRecordCardWithFilter1.MedicalRecordID.HasValue)
+                ctrlMedicalRecordCardWithFilter1.LoadMedicalRecordInfo(_Appointment.MedicalRecordID);
+            if (ctrlPaymentCardWithFilter1.PaymentID.HasValue)
+                ctrlPaymentCardWithFilter1.LoadPaymentInfo(_Appointment.PaymentID);
 
         }
         private void frmAddEditAppointment_Load(object sender, EventArgs e)
@@ -98,19 +131,20 @@ namespace SimpleClinicWinForm.Appointments
             _Appointment.DoctorID = ctrlDoctorCardWithFilter1.DoctorID;
             _Appointment.AppointmentDateTime = dateTimePickerAppointmentDate.Value;
             _Appointment.AppointmentStatus = clsAppointments.enAppointmentStatus.Pending;
-            if (ctrlMedicalRecordCardWithFilter1.MedicalRecordID == -1)
-                _Appointment.MedicalRecordID = null;
-            else
+            if (ctrlMedicalRecordCardWithFilter1.MedicalRecordID.HasValue)
             _Appointment.MedicalRecordID = ctrlMedicalRecordCardWithFilter1.MedicalRecordID;
-            if (ctrlPaymentCardWithFilter1.PaymentID == -1)
-                _Appointment.PaymentID = null;
             else
+                _Appointment.MedicalRecordID = null;
+            if (ctrlPaymentCardWithFilter1.PaymentID.HasValue)
                 _Appointment.PaymentID = ctrlPaymentCardWithFilter1.PaymentID;
+            else
+                _Appointment.PaymentID = null;
 
             if (_Appointment.Save())
             {
                 lblAppointmentID.Text = _Appointment.AppointmentID.ToString();
                 this.Text = "Update Appointment";
+                lblTitle.Text = "Update Appointment";
                 _Mode = enMode.Update;
                 MessageBox.Show("Data Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             } else

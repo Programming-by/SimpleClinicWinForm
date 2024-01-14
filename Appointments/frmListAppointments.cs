@@ -127,6 +127,35 @@ namespace SimpleClinicWinForm.Appointments
             frmAddEditAppointment frm = new frmAddEditAppointment();
 
             frm.ShowDialog();
+
+            frmListAppointments_Load(null, null);
+
+        }
+        private void addNewAppointmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddEditAppointment frm = new frmAddEditAppointment();
+
+            frm.ShowDialog();
+
+            frmListAppointments_Load(null, null);
+        }
+
+
+        private void btnAddNewAppointment_Click(object sender, EventArgs e)
+        {
+            frmAddEditAppointment frm = new frmAddEditAppointment();
+
+            frm.ShowDialog();
+
+            frmListAppointments_Load(null, null);
+        }
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddEditAppointment frm = new frmAddEditAppointment((int)dgvAppointments.CurrentRow.Cells[0].Value);
+
+            frm.ShowDialog();
+
+            frmListAppointments_Load(null, null);
         }
     }
 }

@@ -20,7 +20,7 @@ namespace SimpleClinicWinForm.Payments.Controls
             get { return _Payment; }
         }
 
-        private int? _PaymentID = -1;
+        private int? _PaymentID;
         public int? PaymentID
         {
             get { return _PaymentID; }

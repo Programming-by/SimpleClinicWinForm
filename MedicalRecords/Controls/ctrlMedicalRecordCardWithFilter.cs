@@ -37,9 +37,9 @@ namespace SimpleClinicWinForm.MedicalRecords.Controls
             InitializeComponent();
         }
 
-        public void LoadMedicalRecordInfo(int PrescriptionID)
+        public void LoadMedicalRecordInfo(int? MedicalRecordID)
         {
-            ctrlMedicalRecordCard1.LoadMedicalRecordInfo(PrescriptionID);
+            ctrlMedicalRecordCard1.LoadMedicalRecordInfo(MedicalRecordID);
         }
 
         private void txtMedicalRecord_KeyPress(object sender, KeyPressEventArgs e)

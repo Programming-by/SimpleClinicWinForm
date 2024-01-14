@@ -34,10 +34,10 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.lblAppointmentCount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAddNewPayment = new System.Windows.Forms.Button();
+            this.btnAddNewAppointment = new System.Windows.Forms.Button();
             this.dgvAppointments = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.addNewPaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addNewAppointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtFilter1 = new System.Windows.Forms.TextBox();
@@ -102,14 +102,14 @@
             this.label2.TabIndex = 67;
             this.label2.Text = "# Records: ";
             // 
-            // btnAddNewPayment
+            // btnAddNewAppointment
             // 
-            this.btnAddNewPayment.Location = new System.Drawing.Point(721, 79);
-            this.btnAddNewPayment.Name = "btnAddNewPayment";
-            this.btnAddNewPayment.Size = new System.Drawing.Size(111, 73);
-            this.btnAddNewPayment.TabIndex = 66;
-            this.btnAddNewPayment.UseVisualStyleBackColor = true;
-            this.btnAddNewPayment.Click += new System.EventHandler(this.btnAddNewPayment_Click);
+            this.btnAddNewAppointment.Location = new System.Drawing.Point(721, 79);
+            this.btnAddNewAppointment.Name = "btnAddNewAppointment";
+            this.btnAddNewAppointment.Size = new System.Drawing.Size(111, 73);
+            this.btnAddNewAppointment.TabIndex = 66;
+            this.btnAddNewAppointment.UseVisualStyleBackColor = true;
+            this.btnAddNewAppointment.Click += new System.EventHandler(this.btnAddNewAppointment_Click);
             // 
             // dgvAppointments
             // 
@@ -129,28 +129,30 @@
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addNewPaymentToolStripMenuItem,
+            this.addNewAppointmentToolStripMenuItem,
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(201, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(233, 76);
             // 
-            // addNewPaymentToolStripMenuItem
+            // addNewAppointmentToolStripMenuItem
             // 
-            this.addNewPaymentToolStripMenuItem.Name = "addNewPaymentToolStripMenuItem";
-            this.addNewPaymentToolStripMenuItem.Size = new System.Drawing.Size(200, 24);
-            this.addNewPaymentToolStripMenuItem.Text = "Add New Payment";
+            this.addNewAppointmentToolStripMenuItem.Name = "addNewAppointmentToolStripMenuItem";
+            this.addNewAppointmentToolStripMenuItem.Size = new System.Drawing.Size(232, 24);
+            this.addNewAppointmentToolStripMenuItem.Text = "Add New Appointment";
+            this.addNewAppointmentToolStripMenuItem.Click += new System.EventHandler(this.addNewAppointmentToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(200, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(232, 24);
             this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(200, 24);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(232, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -185,7 +187,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblAppointmentCount);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnAddNewPayment);
+            this.Controls.Add(this.btnAddNewAppointment);
             this.Controls.Add(this.dgvAppointments);
             this.Controls.Add(this.txtFilter1);
             this.Controls.Add(this.label1);
@@ -206,10 +208,10 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblAppointmentCount;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnAddNewPayment;
+        private System.Windows.Forms.Button btnAddNewAppointment;
         private System.Windows.Forms.DataGridView dgvAppointments;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem addNewPaymentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addNewAppointmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.TextBox txtFilter1;

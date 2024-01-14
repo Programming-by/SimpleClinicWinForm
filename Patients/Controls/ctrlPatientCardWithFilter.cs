@@ -1,4 +1,5 @@
 ﻿using SimpleClinicBusinessLayer;
+using SimpleClinicWinForm.Doctors.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,6 +41,11 @@ namespace SimpleClinicWinForm.Patients.Controls
             InitializeComponent();
         }
 
+        public void LoadPatientInfo(int PatientID)
+        {
+            txtPatientID.Text = PatientID.ToString();
+            ctrlPatientCard1.LoadPatientInfo(PatientID);
+        }
         private void btnFind_Click(object sender, EventArgs e)
         {
             if (!this.ValidateChildren())

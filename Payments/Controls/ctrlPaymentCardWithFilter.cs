@@ -13,6 +13,18 @@ namespace SimpleClinicWinForm.Payments.Controls
 {
     public partial class ctrlPaymentCardWithFilter : UserControl
     {
+        private bool _FilterEnabled = true;
+
+        public bool FilterEnabled
+        {
+            get { return _FilterEnabled; }
+            set
+            {
+                _FilterEnabled = value;
+                gbFilter.Enabled = _FilterEnabled;
+            }
+        }
+
         public clsPayments SelectedPaymentInfo
         {
             get { return ctrlPaymentCard1.SelectedPaymentInfo; }
@@ -32,7 +44,11 @@ namespace SimpleClinicWinForm.Payments.Controls
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
-
+        public void LoadPaymentInfo(int? PaymentID)
+        {
+            txtPaymentID.Text = PaymentID.ToString();
+            ctrlPaymentCard1.LoadPaymentInfo(PaymentID);
+        }
         private void btnFind_Click(object sender, EventArgs e)
         {
             if (!this.ValidateChildren())

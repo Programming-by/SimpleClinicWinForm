@@ -13,6 +13,19 @@ namespace SimpleClinicWinForm.Doctors.Controls
 {
     public partial class ctrlDoctorCardWithFilter : UserControl
     {
+
+        private bool _FilterEnabled = true;
+
+        public bool FilterEnabled
+        {
+            get { return _FilterEnabled; }
+            set
+            {
+                _FilterEnabled = value;
+                gbFilter.Enabled = _FilterEnabled;
+            }
+        }
+
         public int DoctorID
         {
             get { return ctrlDoctorCard1.DoctorID; }
@@ -40,6 +53,12 @@ namespace SimpleClinicWinForm.Doctors.Controls
         private void txtDoctorID_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        public void LoadDoctorInfo(int DoctorID)
+        {
+            txtDoctorID.Text = DoctorID.ToString();
+            ctrlDoctorCard1.LoadDoctorInfo(DoctorID);
         }
 
         private void btnFind_Click(object sender, EventArgs e)

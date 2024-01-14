@@ -67,7 +67,7 @@ namespace SimpleClinicWinForm.Prescriptions
                 return;
             }
             ctrlMedicalRecordCardWithFilter1.FilterEnabled = false;
-            ctrlMedicalRecordCardWithFilter1.LoadMedicalRecordInfo(_PrescriptionID);
+            ctrlMedicalRecordCardWithFilter1.LoadMedicalRecordInfo(_Prescription.MedicalRecordID);
             lblPrescriptionID.Text = _Prescription.PrescriptionID.ToString();
             txtMedicationName.Text = _Prescription.MedicationName;
             txtDosage.Text = _Prescription.Dosage;

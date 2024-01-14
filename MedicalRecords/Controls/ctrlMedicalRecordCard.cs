@@ -19,7 +19,7 @@ namespace SimpleClinicWinForm.MedicalRecords.Controls
             get { return _MedicalRecord; }
         }
 
-        private int? _MedicalRecordID = -1;
+        private int? _MedicalRecordID;
 
         public int? MedicalRecordID
         {
