@@ -42,6 +42,7 @@
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtFilter1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cancelAppointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -131,9 +132,11 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addNewAppointmentToolStripMenuItem,
             this.editToolStripMenuItem,
-            this.deleteToolStripMenuItem});
+            this.deleteToolStripMenuItem,
+            this.cancelAppointmentToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(233, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(233, 128);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // addNewAppointmentToolStripMenuItem
             // 
@@ -177,6 +180,13 @@
             this.label1.TabIndex = 64;
             this.label1.Text = "Manage Appointments";
             // 
+            // cancelAppointmentToolStripMenuItem
+            // 
+            this.cancelAppointmentToolStripMenuItem.Name = "cancelAppointmentToolStripMenuItem";
+            this.cancelAppointmentToolStripMenuItem.Size = new System.Drawing.Size(232, 24);
+            this.cancelAppointmentToolStripMenuItem.Text = "Cancel Appointment";
+            this.cancelAppointmentToolStripMenuItem.Click += new System.EventHandler(this.cancelAppointmentToolStripMenuItem_Click);
+            // 
             // frmListAppointments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -216,5 +226,6 @@
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.TextBox txtFilter1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem cancelAppointmentToolStripMenuItem;
     }
 }

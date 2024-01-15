@@ -20,6 +20,8 @@ namespace SimpleClinicWinForm.Patients
         int _PatientID = -1;
         clsPatients _Patient;
 
+        int _SelectedPersonID = -1;
+
         public delegate void DataBackEvent(object sender , int PatientID);
 
         public event DataBackEvent DataBack;
@@ -130,5 +132,6 @@ namespace SimpleClinicWinForm.Patients
 
            
         }
-    }
+
+    } 
 }

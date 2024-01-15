@@ -56,16 +56,17 @@ namespace SimpleClinicWinForm
             frm.ShowDialog();
         }
 
-        private void appointmentsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmListAppointments frm = new frmListAppointments();
-            frm.ShowDialog();
-        }
 
         private void prescriptionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListPrescriptions frm = new frmListPrescriptions();
             frm.ShowDialog();   
+        }
+
+        private void appointmentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListAppointments frm = new frmListAppointments();
+            frm.ShowDialog();
         }
     }
 }

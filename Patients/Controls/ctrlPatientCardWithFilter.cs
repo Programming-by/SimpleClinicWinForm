@@ -41,6 +41,15 @@ namespace SimpleClinicWinForm.Patients.Controls
             InitializeComponent();
         }
 
+        public event Action<int> OnPatientSelected;
+
+        protected virtual void PatientSelected(int PatientID)
+        {
+            Action <int> handler = OnPatientSelected;
+
+            if (handler != null)
+                handler(PatientID);
+        }
         public void LoadPatientInfo(int PatientID)
         {
             txtPatientID.Text = PatientID.ToString();
@@ -55,6 +64,9 @@ namespace SimpleClinicWinForm.Patients.Controls
             }
 
             ctrlPatientCard1.LoadPatientInfo(int.Parse(txtPatientID.Text));
+
+            if (OnPatientSelected != null && FilterEnabled)
+                PatientSelected(ctrlPatientCard1.PatientID);
         }
        
         private void DataBackEvent(object sender , int PatientID)
@@ -86,9 +98,5 @@ namespace SimpleClinicWinForm.Patients.Controls
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
-        private void ctrlPatientCardWithFilter_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

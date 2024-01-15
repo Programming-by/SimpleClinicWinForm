@@ -7,8 +7,10 @@ C:\Users\User\Source\Repos\SimpleClinicWinForm\bin\Debug\SimpleClinicBusinessLay
 C:\Users\User\Source\Repos\SimpleClinicWinForm\bin\Debug\SimpleClinicDataAccessLayer.pdb
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.csproj.AssemblyReference.cache
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Appointments.frmAddEditAppointment.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Appointments.frmListAppointments.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Doctors.Controls.ctrlDoctorCard.resources
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Doctors.Controls.ctrlDoctorCardWithFilter.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Doctors.frmAddNewDoctor.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Doctors.frmListDoctors.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Doctors.frmShowDoctorDetails.resources
@@ -19,11 +21,15 @@ C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Med
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.MedicalRecords.frmListMedicalRecords.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.MedicalRecords.FrmShowMedicalRecordDetails.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Patients.Controls.ctrlPatientCard.resources
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Patients.Controls.ctrlPatientCardWithFilter.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Patients.frmAddEditPatient.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Patients.frmListPatients.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Patients.frmShowPatientDetails.resources
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Payments.Controls.ctrlPaymentCard.resources
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Payments.Controls.ctrlPaymentCardWithFilter.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Payments.frmAddEditPayment.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Payments.frmListPayments.resources
+C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Payments.frmShowPaymentDetails.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.People.Controls.ctrlPersonCard.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.People.Controls.ctrlPersonCardWithFilter.resources
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.People.Controls.frmShowPersonDetails.resources
@@ -37,9 +43,3 @@ C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.csp
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.csproj.CopyComplete
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.exe
 C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.pdb
-C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Appointments.frmAddEditAppointment.resources
-C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Patients.Controls.ctrlPatientCardWithFilter.resources
-C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Doctors.Controls.ctrlDoctorCardWithFilter.resources
-C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Payments.Controls.ctrlPaymentCard.resources
-C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Payments.frmShowPaymentDetails.resources
-C:\Users\User\Source\Repos\SimpleClinicWinForm\obj\Debug\SimpleClinicWinForm.Payments.Controls.ctrlPaymentCardWithFilter.resources

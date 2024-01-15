@@ -34,8 +34,8 @@
             this.btnFind = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPatientID = new System.Windows.Forms.TextBox();
-            this.ctrlPatientCard1 = new SimpleClinicWinForm.Patients.Controls.ctrlPatientCard();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ctrlPatientCard1 = new SimpleClinicWinForm.Patients.Controls.ctrlPatientCard();
             this.gbFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -93,16 +93,16 @@
             this.txtPatientID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPatientID_KeyPress);
             this.txtPatientID.Validating += new System.ComponentModel.CancelEventHandler(this.txtPatientID_Validating);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // ctrlPatientCard1
             // 
             this.ctrlPatientCard1.Location = new System.Drawing.Point(24, 153);
             this.ctrlPatientCard1.Name = "ctrlPatientCard1";
             this.ctrlPatientCard1.Size = new System.Drawing.Size(733, 352);
             this.ctrlPatientCard1.TabIndex = 1;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // ctrlPatientCardWithFilter
             // 
@@ -112,7 +112,6 @@
             this.Controls.Add(this.gbFilter);
             this.Name = "ctrlPatientCardWithFilter";
             this.Size = new System.Drawing.Size(748, 504);
-            this.Load += new System.EventHandler(this.ctrlPatientCardWithFilter_Load);
             this.gbFilter.ResumeLayout(false);
             this.gbFilter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

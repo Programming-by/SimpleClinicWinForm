@@ -12,15 +12,6 @@ namespace SimpleClinicWinForm.People.Controls
 {
     public partial class ctrlPersonCardWithFilter : UserControl
     {
-        public event Action<int> OnPersonSelected;
-        protected virtual void PersonSelected(int PersonID)
-        {
-            Action <int> handler = OnPersonSelected;
-
-            if (handler != null)
-                handler(PersonID);
-        }
-
         private bool _FilterEnabled = true;
         public bool FilterEnabled
         {
@@ -61,8 +52,7 @@ namespace SimpleClinicWinForm.People.Controls
                     break;
             }
 
-            if (OnPersonSelected != null && FilterEnabled)
-                PersonSelected(ctrlPersonCard1.PersonID);
+    
         }
         private void btnFind_Click(object sender, EventArgs e)
         {

@@ -38,14 +38,20 @@ namespace SimpleClinicWinForm.Appointments
                 dgvAppointments.Columns[2].HeaderText = "Doctor Name";
                 dgvAppointments.Columns[2].Width = 140;
 
-                dgvAppointments.Columns[3].HeaderText = "Appointment Date Time";
+                dgvAppointments.Columns[3].HeaderText = "Doctor Name";
                 dgvAppointments.Columns[3].Width = 140;
 
-                dgvAppointments.Columns[4].HeaderText = "Diagnosis";
-                dgvAppointments.Columns[4].Width = 160;
+                dgvAppointments.Columns[4].HeaderText = "Appointment Date Time";
+                dgvAppointments.Columns[4].Width = 140;
 
-                dgvAppointments.Columns[5].HeaderText = "Payment Date";
+                dgvAppointments.Columns[5].HeaderText = "Appointment Status";
                 dgvAppointments.Columns[5].Width = 160;
+
+                dgvAppointments.Columns[6].HeaderText = "Diagnosis";
+                dgvAppointments.Columns[6].Width = 160;
+
+                dgvAppointments.Columns[7].HeaderText = "Payment Date";
+                dgvAppointments.Columns[7].Width = 160;
             }
         }
 
@@ -156,6 +162,35 @@ namespace SimpleClinicWinForm.Appointments
             frm.ShowDialog();
 
             frmListAppointments_Load(null, null);
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            string AppointmentStatus = (string) dgvAppointments.CurrentRow.Cells[5].Value;
+            cancelAppointmentToolStripMenuItem.Enabled = (AppointmentStatus != "Canceled" && (AppointmentStatus != "Completed"));
+        }
+
+        private void cancelAppointmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you want to cancel this appointment?", "Cancel", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                return;
+
+            int AppointmentID = (int)dgvAppointments.CurrentRow.Cells[0].Value;
+            clsAppointments _Appointment = clsAppointments.Find(AppointmentID);
+
+            if (_Appointment != null)
+            {
+            if (_Appointment.Cancel())
+            {
+                MessageBox.Show("Appointment has been canceled","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                frmListAppointments_Load(null, null);
+            } else
+            {
+                MessageBox.Show("Appointment failed to be canceled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            }
+
         }
     }
 }
