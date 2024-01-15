@@ -88,6 +88,19 @@ namespace SimpleClinicWinForm.Patients
             }
             if (ctrlPersonCardWithFilter1.PersonID != -1)
             {
+                clsPersons _Person = clsPersons.Find(ctrlPersonCardWithFilter1.PersonID);
+                if (_Person != null)
+                {
+
+                    if (!_Person.IsPersonAgeGreaterOrEqual4Years())
+                    {
+                        MessageBox.Show("the clinic patients must be 4 years at least", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ctrlPersonCardWithFilter1.FilterFocus();
+                        return;
+                    }
+                }
+
+
                 bool IsDoctor = clsDoctors.IsDoctorsExistByPersonID(ctrlPersonCardWithFilter1.PersonID);
                 bool IsPatient = clsPatients.IsPatientsExistByPersonID(ctrlPersonCardWithFilter1.PersonID);
 

@@ -89,7 +89,7 @@ namespace SimpleClinicWinForm.Doctors
                if (_Person != null)
                 {
                   
-                    if (!_Person.IsPersonAgeGreaterOrEqual24())
+                    if (!_Person.IsPersonAgeGreaterOrEqual24Years())
                     {
                         MessageBox.Show("this person is too young to be doctor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         ctrlPersonCardWithFilter1.FilterFocus();
