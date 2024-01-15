@@ -85,6 +85,19 @@ namespace SimpleClinicWinForm.Doctors
             }
             if (ctrlPersonCardWithFilter1.PersonID != -1)
             {
+                clsPersons _Person = clsPersons.Find(ctrlPersonCardWithFilter1.PersonID);
+               if (_Person != null)
+                {
+                  
+                    if (!_Person.IsPersonAgeGreaterOrEqual24())
+                    {
+                        MessageBox.Show("this person is too young to be doctor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ctrlPersonCardWithFilter1.FilterFocus();
+                        return;
+                    }
+                }
+
+
                 if (clsDoctors.IsDoctorsExistByPersonID(ctrlPersonCardWithFilter1.PersonID))
                 {
                     MessageBox.Show("this person is linked to a doctor,Please choose another one", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
