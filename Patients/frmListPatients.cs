@@ -1,4 +1,5 @@
 ﻿using SimpleClinicBusinessLayer;
+using SimpleClinicWinForm.Appointments;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,20 +31,23 @@ namespace SimpleClinicWinForm.Patients
                 dgvPatients.Columns[0].HeaderText = "Patient ID";
                 dgvPatients.Columns[0].Width = 110;
 
-                dgvPatients.Columns[1].HeaderText = "Patient Name";
-                dgvPatients.Columns[1].Width = 150;
+                dgvPatients.Columns[1].HeaderText = "Person ID";
+                dgvPatients.Columns[1].Width = 110;
 
-                dgvPatients.Columns[2].HeaderText = "Date Of Birth";
-                dgvPatients.Columns[2].Width = 140;
+                dgvPatients.Columns[2].HeaderText = "Patient Name";
+                dgvPatients.Columns[2].Width = 150;
 
-                dgvPatients.Columns[3].HeaderText = "Gender";
-                dgvPatients.Columns[3].Width = 120;
+                dgvPatients.Columns[3].HeaderText = "Date Of Birth";
+                dgvPatients.Columns[3].Width = 140;
 
-                dgvPatients.Columns[4].HeaderText = "PhoneNumber";
+                dgvPatients.Columns[4].HeaderText = "Gender";
                 dgvPatients.Columns[4].Width = 120;
 
-                dgvPatients.Columns[5].HeaderText = "Email";
-                dgvPatients.Columns[5].Width = 140;
+                dgvPatients.Columns[5].HeaderText = "PhoneNumber";
+                dgvPatients.Columns[5].Width = 120;
+
+                dgvPatients.Columns[6].HeaderText = "Email";
+                dgvPatients.Columns[6].Width = 140;
             }
         }
 
@@ -67,6 +71,9 @@ namespace SimpleClinicWinForm.Patients
             {
                 case "PatientID":
                     FilterColumn = "PatientID";
+                    break;
+                case "PersonID":
+                    FilterColumn = "PersonID";
                     break;
                 case "Patient Name":
                     FilterColumn = "Name";
@@ -92,7 +99,7 @@ namespace SimpleClinicWinForm.Patients
                 return;
             }
 
-            if (cbFilters.Text == "PatientID")
+            if (cbFilters.Text == "PatientID" || cbFilters.Text == "PersonID")
                 _dtPatients.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, txtFilter1.Text);
             else
                 _dtPatients.DefaultView.RowFilter = string.Format("{0} Like '{1}%'", FilterColumn, txtFilter1.Text);
@@ -102,7 +109,7 @@ namespace SimpleClinicWinForm.Patients
 
         private void txtFilter1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (cbFilters.Text == "PatientID")
+            if (cbFilters.Text == "PatientID" || cbFilters.Text == "PersonID")
                 e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
@@ -149,6 +156,13 @@ namespace SimpleClinicWinForm.Patients
         private void dgvPatients_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             frmShowPatientDetails frm = new frmShowPatientDetails((int)dgvPatients.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
+
+        private void showPatientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShowPersonAppointmentHistory frm = new frmShowPersonAppointmentHistory((int)dgvPatients.CurrentRow.Cells[1].Value);
+
             frm.ShowDialog();
         }
     }

@@ -43,6 +43,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.txtFilter1 = new System.Windows.Forms.TextBox();
             this.dgvPatients = new System.Windows.Forms.DataGridView();
+            this.showPatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +54,7 @@
             this.cbFilters.Items.AddRange(new object[] {
             "None",
             "PatientID",
+            "PersonID",
             "Patient Name",
             "Gender",
             "Phone Number",
@@ -126,28 +128,28 @@
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(213, 24);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(304, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(213, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(304, 24);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // addNewPatientToolStripMenuItem
             // 
             this.addNewPatientToolStripMenuItem.Name = "addNewPatientToolStripMenuItem";
-            this.addNewPatientToolStripMenuItem.Size = new System.Drawing.Size(213, 24);
+            this.addNewPatientToolStripMenuItem.Size = new System.Drawing.Size(304, 24);
             this.addNewPatientToolStripMenuItem.Text = "Add New Patient";
             this.addNewPatientToolStripMenuItem.Click += new System.EventHandler(this.addNewPatientToolStripMenuItem_Click);
             // 
             // showPatientDetailsToolStripMenuItem
             // 
             this.showPatientDetailsToolStripMenuItem.Name = "showPatientDetailsToolStripMenuItem";
-            this.showPatientDetailsToolStripMenuItem.Size = new System.Drawing.Size(213, 24);
+            this.showPatientDetailsToolStripMenuItem.Size = new System.Drawing.Size(304, 24);
             this.showPatientDetailsToolStripMenuItem.Text = "Show Patient Details";
             this.showPatientDetailsToolStripMenuItem.Click += new System.EventHandler(this.showPatientDetailsToolStripMenuItem_Click);
             // 
@@ -158,9 +160,10 @@
             this.showPatientDetailsToolStripMenuItem,
             this.addNewPatientToolStripMenuItem,
             this.editToolStripMenuItem,
-            this.deleteToolStripMenuItem});
+            this.deleteToolStripMenuItem,
+            this.showPatientToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(214, 100);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(305, 124);
             // 
             // txtFilter1
             // 
@@ -186,6 +189,13 @@
             this.dgvPatients.Size = new System.Drawing.Size(1146, 295);
             this.dgvPatients.TabIndex = 47;
             this.dgvPatients.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPatients_CellDoubleClick);
+            // 
+            // showPatientToolStripMenuItem
+            // 
+            this.showPatientToolStripMenuItem.Name = "showPatientToolStripMenuItem";
+            this.showPatientToolStripMenuItem.Size = new System.Drawing.Size(304, 24);
+            this.showPatientToolStripMenuItem.Text = "Show Person Appointment History";
+            this.showPatientToolStripMenuItem.Click += new System.EventHandler(this.showPatientToolStripMenuItem_Click);
             // 
             // frmListPatients
             // 
@@ -227,5 +237,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox txtFilter1;
         private System.Windows.Forms.DataGridView dgvPatients;
+        private System.Windows.Forms.ToolStripMenuItem showPatientToolStripMenuItem;
     }
 }

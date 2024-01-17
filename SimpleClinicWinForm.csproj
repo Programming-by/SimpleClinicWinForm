@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Appointments\Controls\ctrlAppointmentInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Appointments\Controls\ctrlAppointmentInfo.Designer.cs">
+      <DependentUpon>ctrlAppointmentInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Appointments\frmAddEditAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,18 @@
     </Compile>
     <Compile Include="Appointments\frmListAppointments.Designer.cs">
       <DependentUpon>frmListAppointments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Appointments\frmShowAppointmentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointments\frmShowAppointmentInfo.Designer.cs">
+      <DependentUpon>frmShowAppointmentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Appointments\frmShowPersonAppointmentHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointments\frmShowPersonAppointmentHistory.Designer.cs">
+      <DependentUpon>frmShowPersonAppointmentHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="Doctors\Controls\ctrlDoctorCard.cs">
       <SubType>UserControl</SubType>
@@ -124,6 +142,12 @@
     </Compile>
     <Compile Include="MedicalRecords\FrmShowMedicalRecordDetails.Designer.cs">
       <DependentUpon>FrmShowMedicalRecordDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patients\Controls\ctrlPatientAppointments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Patients\Controls\ctrlPatientAppointments.Designer.cs">
+      <DependentUpon>ctrlPatientAppointments.cs</DependentUpon>
     </Compile>
     <Compile Include="Patients\Controls\ctrlPatientCard.cs">
       <SubType>UserControl</SubType>
@@ -229,11 +253,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Appointments\Controls\ctrlAppointmentInfo.resx">
+      <DependentUpon>ctrlAppointmentInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Appointments\frmAddEditAppointment.resx">
       <DependentUpon>frmAddEditAppointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Appointments\frmListAppointments.resx">
       <DependentUpon>frmListAppointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appointments\frmShowAppointmentInfo.resx">
+      <DependentUpon>frmShowAppointmentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appointments\frmShowPersonAppointmentHistory.resx">
+      <DependentUpon>frmShowPersonAppointmentHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doctors\Controls\ctrlDoctorCard.resx">
       <DependentUpon>ctrlDoctorCard.cs</DependentUpon>
@@ -267,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MedicalRecords\FrmShowMedicalRecordDetails.resx">
       <DependentUpon>FrmShowMedicalRecordDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patients\Controls\ctrlPatientAppointments.resx">
+      <DependentUpon>ctrlPatientAppointments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patients\Controls\ctrlPatientCard.resx">
       <DependentUpon>ctrlPatientCard.cs</DependentUpon>
