@@ -68,5 +68,12 @@ namespace SimpleClinicWinForm
             frmListAppointments frm = new frmListAppointments();
             frm.ShowDialog();
         }
+
+        private void rescheduleNewAppointmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRescheduleAppointment frm = new frmRescheduleAppointment();
+
+            frm.ShowDialog();
+        }
     }
 }

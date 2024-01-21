@@ -15,6 +15,18 @@ namespace SimpleClinicWinForm.Appointments.Controls
     {
 
         clsAppointments _Appointment;
+
+        public clsAppointments SelectedAppointmentInfo
+        {
+            get { return _Appointment; }
+        }
+
+        private int _AppointmentID = -1;
+
+        public int AppointmentID
+        {
+            get { return _AppointmentID; } 
+        }
         public ctrlAppointmentInfo()
         {
             InitializeComponent();
@@ -30,15 +42,19 @@ namespace SimpleClinicWinForm.Appointments.Controls
                 MessageBox.Show("Appointment is not found");
                 return;
             }
+            _AppointmentID = AppointmentID;
 
+       
             lblAppointmentID.Text = _Appointment.AppointmentID.ToString();
             lblPatientName.Text = _Appointment.PatientInfo.PersonInfo.Name;
             lblDoctorName.Text = _Appointment.DoctorInfo.PersonInfo.Name;
             lblSpecialization.Text = _Appointment.DoctorInfo.Specialization;
             lblAppointmentDateTime.Text = _Appointment.AppointmentDateTime.ToString();
             lblAppointmentStatus.Text = _Appointment.AppointmentStatus.ToString();
-            lblDiagnosis.Text = _Appointment.MedicalRecordInfo.Diagnosis;
-            lblAdditionalNotes.Text = _Appointment.MedicalRecordInfo.AdditionalNotes;
+            if (_Appointment.MedicalRecordID.HasValue)
+                lblDiagnosis.Text = _Appointment.MedicalRecordInfo.Diagnosis;
+            if (_Appointment.MedicalRecordID.HasValue)
+                lblAdditionalNotes.Text = _Appointment.MedicalRecordInfo.AdditionalNotes;
 
         }
     }

@@ -38,7 +38,7 @@ namespace SimpleClinicWinForm.Appointments
                 dgvAppointments.Columns[2].HeaderText = "Doctor Name";
                 dgvAppointments.Columns[2].Width = 140;
 
-                dgvAppointments.Columns[3].HeaderText = "Doctor Name";
+                dgvAppointments.Columns[3].HeaderText = "Specialization";
                 dgvAppointments.Columns[3].Width = 140;
 
                 dgvAppointments.Columns[4].HeaderText = "Appointment Date Time";
@@ -167,7 +167,10 @@ namespace SimpleClinicWinForm.Appointments
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
             string AppointmentStatus = (string) dgvAppointments.CurrentRow.Cells[5].Value;
-            cancelAppointmentToolStripMenuItem.Enabled = (AppointmentStatus != "Canceled" && (AppointmentStatus != "Completed"));
+            cancelAppointmentToolStripMenuItem.Enabled = (AppointmentStatus == "Pending");
+            confirmAppointmentToolStripMenuItem.Enabled = (AppointmentStatus == "Pending");
+            completeAppointmentToolStripMenuItem.Enabled = (AppointmentStatus == "Pending");
+
         }
 
         private void cancelAppointmentToolStripMenuItem_Click(object sender, EventArgs e)
@@ -191,6 +194,52 @@ namespace SimpleClinicWinForm.Appointments
 
             }
 
+        }
+
+        private void confirmAppointmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you want to confirm this appointment?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                return;
+
+            int AppointmentID = (int)dgvAppointments.CurrentRow.Cells[0].Value;
+            clsAppointments _Appointment = clsAppointments.Find(AppointmentID);
+
+            if (_Appointment != null)
+            {
+                if (_Appointment.Confirm())
+                {
+                    MessageBox.Show("Appointment has been confirmed", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frmListAppointments_Load(null, null);
+                }
+                else
+                {
+                    MessageBox.Show("Appointment failed to be confirmed", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
+        private void completeAppointmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you want to complete this appointment?", "Complete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                return;
+
+            int AppointmentID = (int)dgvAppointments.CurrentRow.Cells[0].Value;
+            clsAppointments _Appointment = clsAppointments.Find(AppointmentID);
+
+            if (_Appointment != null)
+            {
+                if (_Appointment.SetComplete())
+                {
+                    MessageBox.Show("Appointment has been completed", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frmListAppointments_Load(null, null);
+                }
+                else
+                {
+                    MessageBox.Show("Appointment failed to be complete", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
         }
     }
 }

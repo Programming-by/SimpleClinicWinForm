@@ -39,6 +39,7 @@ namespace SimpleClinicWinForm.MedicalRecords.Controls
 
         public void LoadMedicalRecordInfo(int? MedicalRecordID)
         {
+            txtMedicalRecord.Text = MedicalRecordID.ToString(); 
             ctrlMedicalRecordCard1.LoadMedicalRecordInfo(MedicalRecordID);
         }
 

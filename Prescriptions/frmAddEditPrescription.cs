@@ -129,7 +129,7 @@ namespace SimpleClinicWinForm.Prescriptions
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            _Prescription.MedicalRecordID = ctrlMedicalRecordCardWithFilter1.MedicalRecordID;
+            _Prescription.MedicalRecordID = (int)ctrlMedicalRecordCardWithFilter1.MedicalRecordID;
             _Prescription.MedicationName = txtMedicationName.Text;
             _Prescription.Dosage = txtDosage.Text;
             _Prescription.Frequency = txtFrequency.Text;

@@ -52,6 +52,12 @@
     <Compile Include="Appointments\Controls\ctrlAppointmentInfo.Designer.cs">
       <DependentUpon>ctrlAppointmentInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Appointments\Controls\ctrlAppointmentInfoWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Appointments\Controls\ctrlAppointmentInfoWithFilter.Designer.cs">
+      <DependentUpon>ctrlAppointmentInfoWithFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Appointments\frmAddEditAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,12 @@
     </Compile>
     <Compile Include="Appointments\frmListAppointments.Designer.cs">
       <DependentUpon>frmListAppointments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Appointments\frmRescheduleAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointments\frmRescheduleAppointment.Designer.cs">
+      <DependentUpon>frmRescheduleAppointment.cs</DependentUpon>
     </Compile>
     <Compile Include="Appointments\frmShowAppointmentInfo.cs">
       <SubType>Form</SubType>
@@ -256,11 +268,17 @@
     <EmbeddedResource Include="Appointments\Controls\ctrlAppointmentInfo.resx">
       <DependentUpon>ctrlAppointmentInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Appointments\Controls\ctrlAppointmentInfoWithFilter.resx">
+      <DependentUpon>ctrlAppointmentInfoWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Appointments\frmAddEditAppointment.resx">
       <DependentUpon>frmAddEditAppointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Appointments\frmListAppointments.resx">
       <DependentUpon>frmListAppointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appointments\frmRescheduleAppointment.resx">
+      <DependentUpon>frmRescheduleAppointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Appointments\frmShowAppointmentInfo.resx">
       <DependentUpon>frmShowAppointmentInfo.cs</DependentUpon>

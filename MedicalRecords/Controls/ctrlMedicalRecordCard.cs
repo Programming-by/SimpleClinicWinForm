@@ -40,7 +40,7 @@ namespace SimpleClinicWinForm.MedicalRecords.Controls
                 return;
             }
 
-            _MedicalRecordID = MedicalRecordID;
+         _MedicalRecordID = MedicalRecordID;
          lblMedicalRecordID.Text = MedicalRecordID.ToString();
          lblVisitDescription.Text =   _MedicalRecord.VisitDescription;
          lblDiagnosis.Text = _MedicalRecord.Diagnosis;

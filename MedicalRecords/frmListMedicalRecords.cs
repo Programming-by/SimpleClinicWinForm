@@ -99,7 +99,11 @@ namespace SimpleClinicWinForm.MedicalRecords
 
         private void addNewRecordToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmAddEditMedicalRecord frm = new frmAddEditMedicalRecord();
 
+            frm.ShowDialog();
+
+            frmListMedicalRecords_Load(null, null);
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)

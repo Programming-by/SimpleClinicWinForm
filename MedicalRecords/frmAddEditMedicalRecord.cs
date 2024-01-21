@@ -85,7 +85,7 @@ namespace SimpleClinicWinForm.MedicalRecords
             if (_Record.Save())
             {
                 lblMedicalRecordID.Text = _Record.MedicalRecordID.ToString();
-                DataBack?.Invoke(this,_Record.MedicalRecordID);
+               DataBack?.Invoke(this,_Record.MedicalRecordID);
                 Mode = enMode.Update;
                 lblTitle.Text = "Update MedicalRecord";
                 this.Text = "Update MedicalRecord";

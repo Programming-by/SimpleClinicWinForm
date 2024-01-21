@@ -68,18 +68,19 @@ namespace SimpleClinicWinForm.Appointments
 
             ctrlPatientCardWithFilter1.FilterEnabled = false;
             ctrlDoctorCardWithFilter1.FilterEnabled = false;
-           
+            ctrlMedicalRecordCardWithFilter1.FilterEnabled = false;
+            ctrlPaymentCardWithFilter1.FilterEnabled = false;
+
 
             ctrlPatientCardWithFilter1.LoadPatientInfo(_Appointment.PatientID);
             ctrlDoctorCardWithFilter1.LoadDoctorInfo(_Appointment.DoctorID);
+            lblAppointmentID.Text = _Appointment.AppointmentID.ToString();
             lblAppointmentStatus.Text = _Appointment.AppointmentStatus.ToString();
             if (_Appointment.AppointmentDateTime > DateTime.Now)
                 dateTimePickerAppointmentDate.Value = _Appointment.AppointmentDateTime;
             else
                 dateTimePickerAppointmentDate.Value = DateTime.Now;
-            if (ctrlMedicalRecordCardWithFilter1.MedicalRecordID.HasValue)
                 ctrlMedicalRecordCardWithFilter1.LoadMedicalRecordInfo(_Appointment.MedicalRecordID);
-            if (ctrlPaymentCardWithFilter1.PaymentID.HasValue)
                 ctrlPaymentCardWithFilter1.LoadPaymentInfo(_Appointment.PaymentID);
 
         }
@@ -132,9 +133,10 @@ namespace SimpleClinicWinForm.Appointments
             _Appointment.AppointmentDateTime = dateTimePickerAppointmentDate.Value;
             _Appointment.AppointmentStatus = clsAppointments.enAppointmentStatus.Pending;
             if (ctrlMedicalRecordCardWithFilter1.MedicalRecordID.HasValue)
-            _Appointment.MedicalRecordID = ctrlMedicalRecordCardWithFilter1.MedicalRecordID;
+                _Appointment.MedicalRecordID = ctrlMedicalRecordCardWithFilter1.MedicalRecordID;
             else
                 _Appointment.MedicalRecordID = null;
+            _Appointment.MedicalRecordID = ctrlMedicalRecordCardWithFilter1.MedicalRecordID;
             if (ctrlPaymentCardWithFilter1.PaymentID.HasValue)
                 _Appointment.PaymentID = ctrlPaymentCardWithFilter1.PaymentID;
             else
