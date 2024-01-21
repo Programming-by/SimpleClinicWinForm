@@ -36,11 +36,27 @@ namespace SimpleClinicWinForm.Appointments.Controls
             get { return ctrlAppointmentInfo1.AppointmentID; }
         }
 
+        private bool _FilterEnabled = true;
+
+        public bool FilterEnabled
+        {
+           get { return  _FilterEnabled; }
+
+        set {
+                _FilterEnabled = value; 
+                gbFilter.Enabled = _FilterEnabled;
+            }
+        }
         public ctrlAppointmentInfoWithFilter()
         {
             InitializeComponent();
         }
 
+        public void LoadAppointmentInfo(int AppointmentID)
+        {
+            txtAppointmentID.Text = AppointmentID.ToString();
+            ctrlAppointmentInfo1.LoadAppointmentInfo(AppointmentID);
+        }
         private void btnFind_Click(object sender, EventArgs e)
         {
             ctrlAppointmentInfo1.LoadAppointmentInfo(int.Parse(txtAppointmentID.Text));

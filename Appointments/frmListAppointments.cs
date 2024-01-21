@@ -9,6 +9,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static SimpleClinicBusinessLayer.clsAppointments;
 
 namespace SimpleClinicWinForm.Appointments
 {
@@ -128,15 +129,6 @@ namespace SimpleClinicWinForm.Appointments
                 MessageBox.Show("Failed to Delete this Appointment", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void btnAddNewPayment_Click(object sender, EventArgs e)
-        {
-            frmAddEditAppointment frm = new frmAddEditAppointment();
-
-            frm.ShowDialog();
-
-            frmListAppointments_Load(null, null);
-
-        }
         private void addNewAppointmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAddEditAppointment frm = new frmAddEditAppointment();
@@ -170,7 +162,7 @@ namespace SimpleClinicWinForm.Appointments
             cancelAppointmentToolStripMenuItem.Enabled = (AppointmentStatus == "Pending");
             confirmAppointmentToolStripMenuItem.Enabled = (AppointmentStatus == "Pending");
             completeAppointmentToolStripMenuItem.Enabled = (AppointmentStatus == "Pending");
-
+            rescheduleAppointmentToolStripMenuItem.Enabled = (AppointmentStatus != "Canceled") && (AppointmentStatus != "Completed");
         }
 
         private void cancelAppointmentToolStripMenuItem_Click(object sender, EventArgs e)
@@ -240,6 +232,15 @@ namespace SimpleClinicWinForm.Appointments
                 }
 
             }
+        }
+
+        private void rescheduleAppointmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRescheduleAppointment frm = new frmRescheduleAppointment((int)dgvAppointments.CurrentRow.Cells[0].Value);
+
+            frm.ShowDialog();
+
+            frmListAppointments_Load(null,null);
         }
     }
 }

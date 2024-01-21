@@ -15,11 +15,45 @@ namespace SimpleClinicWinForm.Appointments
     {
         clsAppointments _Appointment;
 
+        int _AppointmentID;
+
         public frmRescheduleAppointment()
         {
             InitializeComponent();
         }
 
+
+        public frmRescheduleAppointment(int AppointmentID)
+        {
+            InitializeComponent();
+            _AppointmentID = AppointmentID;
+
+            ctrlAppointmentInfoWithFilter1.FilterEnabled = false;
+            ctrlAppointmentInfoWithFilter1.LoadAppointmentInfo(AppointmentID);
+            lblAppointmentStatus.Text = clsAppointments.enAppointmentStatus.Pending.ToString();
+
+        }
+
+        private void ctrlAppointmentInfoWithFilter1_OnAppointmentSelected(int obj)
+        {
+            _Appointment = clsAppointments.Find(obj);
+
+            if (_Appointment != null)
+            {
+                if (_Appointment.AppointmentStatus == clsAppointments.enAppointmentStatus.Canceled ||
+                 _Appointment.AppointmentStatus == clsAppointments.enAppointmentStatus.Completed
+                 )
+                {
+                    MessageBox.Show("Appointment is Canceled Or Completed", "failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+        }
+
+        private void frmRescheduleAppointment_Load(object sender, EventArgs e)
+        {
+            lblAppointmentStatus.Text = clsAppointments.enAppointmentStatus.Pending.ToString();
+        }
         private void btnScheduleNewAppointment_Click(object sender, EventArgs e)
         {
             _Appointment = clsAppointments.Find(ctrlAppointmentInfoWithFilter1.AppointmentID);
@@ -41,25 +75,5 @@ namespace SimpleClinicWinForm.Appointments
 
         }
 
-        private void frmRescheduleAppointment_Load(object sender, EventArgs e)
-        {
-            lblAppointmentStatus.Text = clsAppointments.enAppointmentStatus.Pending.ToString();
-        }
-
-        private void ctrlAppointmentInfoWithFilter1_OnAppointmentSelected(int obj)
-        {
-            _Appointment = clsAppointments.Find(obj);
-
-            if (_Appointment != null)
-            {
-                if (_Appointment.AppointmentStatus == clsAppointments.enAppointmentStatus.Canceled ||
-                 _Appointment.AppointmentStatus == clsAppointments.enAppointmentStatus.Completed
-                 )
-                {
-                    MessageBox.Show("Appointment is Canceled Or Completed", "failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-            }
-        }
     }
 }

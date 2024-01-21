@@ -41,10 +41,11 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelAppointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtFilter1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.confirmAppointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.completeAppointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtFilter1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.rescheduleAppointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -137,38 +138,53 @@
             this.deleteToolStripMenuItem,
             this.cancelAppointmentToolStripMenuItem,
             this.confirmAppointmentToolStripMenuItem,
-            this.completeAppointmentToolStripMenuItem});
+            this.completeAppointmentToolStripMenuItem,
+            this.rescheduleAppointmentToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(236, 176);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(246, 200);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // addNewAppointmentToolStripMenuItem
             // 
             this.addNewAppointmentToolStripMenuItem.Name = "addNewAppointmentToolStripMenuItem";
-            this.addNewAppointmentToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
+            this.addNewAppointmentToolStripMenuItem.Size = new System.Drawing.Size(245, 24);
             this.addNewAppointmentToolStripMenuItem.Text = "Add New Appointment";
             this.addNewAppointmentToolStripMenuItem.Click += new System.EventHandler(this.addNewAppointmentToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(245, 24);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(245, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // cancelAppointmentToolStripMenuItem
             // 
             this.cancelAppointmentToolStripMenuItem.Name = "cancelAppointmentToolStripMenuItem";
-            this.cancelAppointmentToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
+            this.cancelAppointmentToolStripMenuItem.Size = new System.Drawing.Size(245, 24);
             this.cancelAppointmentToolStripMenuItem.Text = "Cancel Appointment";
             this.cancelAppointmentToolStripMenuItem.Click += new System.EventHandler(this.cancelAppointmentToolStripMenuItem_Click);
+            // 
+            // confirmAppointmentToolStripMenuItem
+            // 
+            this.confirmAppointmentToolStripMenuItem.Name = "confirmAppointmentToolStripMenuItem";
+            this.confirmAppointmentToolStripMenuItem.Size = new System.Drawing.Size(245, 24);
+            this.confirmAppointmentToolStripMenuItem.Text = "Confirm Appointment";
+            this.confirmAppointmentToolStripMenuItem.Click += new System.EventHandler(this.confirmAppointmentToolStripMenuItem_Click);
+            // 
+            // completeAppointmentToolStripMenuItem
+            // 
+            this.completeAppointmentToolStripMenuItem.Name = "completeAppointmentToolStripMenuItem";
+            this.completeAppointmentToolStripMenuItem.Size = new System.Drawing.Size(245, 24);
+            this.completeAppointmentToolStripMenuItem.Text = "Complete Appointment";
+            this.completeAppointmentToolStripMenuItem.Click += new System.EventHandler(this.completeAppointmentToolStripMenuItem_Click);
             // 
             // txtFilter1
             // 
@@ -191,19 +207,12 @@
             this.label1.TabIndex = 64;
             this.label1.Text = "Manage Appointments";
             // 
-            // confirmAppointmentToolStripMenuItem
+            // rescheduleAppointmentToolStripMenuItem
             // 
-            this.confirmAppointmentToolStripMenuItem.Name = "confirmAppointmentToolStripMenuItem";
-            this.confirmAppointmentToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
-            this.confirmAppointmentToolStripMenuItem.Text = "Confirm Appointment";
-            this.confirmAppointmentToolStripMenuItem.Click += new System.EventHandler(this.confirmAppointmentToolStripMenuItem_Click);
-            // 
-            // completeAppointmentToolStripMenuItem
-            // 
-            this.completeAppointmentToolStripMenuItem.Name = "completeAppointmentToolStripMenuItem";
-            this.completeAppointmentToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
-            this.completeAppointmentToolStripMenuItem.Text = "Complete Appointment";
-            this.completeAppointmentToolStripMenuItem.Click += new System.EventHandler(this.completeAppointmentToolStripMenuItem_Click);
+            this.rescheduleAppointmentToolStripMenuItem.Name = "rescheduleAppointmentToolStripMenuItem";
+            this.rescheduleAppointmentToolStripMenuItem.Size = new System.Drawing.Size(245, 24);
+            this.rescheduleAppointmentToolStripMenuItem.Text = "Reschedule Appointment";
+            this.rescheduleAppointmentToolStripMenuItem.Click += new System.EventHandler(this.rescheduleAppointmentToolStripMenuItem_Click);
             // 
             // frmListAppointments
             // 
@@ -247,5 +256,6 @@
         private System.Windows.Forms.ToolStripMenuItem cancelAppointmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem confirmAppointmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem completeAppointmentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rescheduleAppointmentToolStripMenuItem;
     }
 }
