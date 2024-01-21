@@ -159,10 +159,10 @@ namespace SimpleClinicWinForm.Appointments
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
             string AppointmentStatus = (string) dgvAppointments.CurrentRow.Cells[5].Value;
-            cancelAppointmentToolStripMenuItem.Enabled = (AppointmentStatus == "Pending");
+            cancelAppointmentToolStripMenuItem.Enabled = (AppointmentStatus == "Pending") || (AppointmentStatus == "Confirmed");
             confirmAppointmentToolStripMenuItem.Enabled = (AppointmentStatus == "Pending");
-            completeAppointmentToolStripMenuItem.Enabled = (AppointmentStatus == "Pending");
-            rescheduleAppointmentToolStripMenuItem.Enabled = (AppointmentStatus != "Canceled") && (AppointmentStatus != "Completed");
+            completeAppointmentToolStripMenuItem.Enabled = (AppointmentStatus == "Confirmed");
+            rescheduleAppointmentToolStripMenuItem.Enabled = (AppointmentStatus == "Pending") || (AppointmentStatus == "Confirmed");
         }
 
         private void cancelAppointmentToolStripMenuItem_Click(object sender, EventArgs e)
